@@ -5,7 +5,7 @@ let pathToReactDom = path.resolve('node_modules', 'react-dom/dist/react-dom.min.
 
 module.exports = {
 	entry: [
-		path.join(__dirname, 'src', 'main.js')
+		path.join(__dirname, 'src', 'main.jsx')
 	],
 	output: {
 		path: path.join(__dirname, 'static'),
@@ -29,7 +29,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
+				test: /\.js|\.jsx$/,
 				exclude: ['node_modules'],
 				loader: 'babel',
 				query: {compact: false} 

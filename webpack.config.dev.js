@@ -5,12 +5,11 @@ module.exports = {
 	devtool: 'eval-source-map',
 	entry: [
 		'webpack-hot-middleware/client',
-		path.join(__dirname, 'src', 'main.js')
+		path.join(__dirname, 'src', 'main.jsx')
 	],
 	output: {
 		path: path.join(__dirname, 'static'),
-		filename: '[name].js',
-		publicPath: '/static/'
+		filename: '[name].js'
 	},
 	plugins: [
 			new webpack.HotModuleReplacementPlugin(),
@@ -19,7 +18,7 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
+				test: /\.js|\.jsx$/,
 				exclude: ['node_modules'],
 				loader: 'babel'
 			}
