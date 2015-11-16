@@ -6,7 +6,7 @@ export default class TrevarezApp extends React.Component {
 		return (
 			<div>
 					Borne tactile pour l'exposition permanente "Bâtir un rêve" au château de Trévarez.
-	    </div>
+			</div>
 		);
 	}
 }
@@ -14,5 +14,5 @@ export default class TrevarezApp extends React.Component {
 ReactDOM.render(<TrevarezApp />, document.getElementById('root'));
 
 if (module.hot) {
-  module.hot.accept();
+	module.hot.accept();
 }

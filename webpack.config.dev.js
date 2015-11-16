@@ -10,17 +10,17 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'static'),
 		filename: '[name].js',
-    publicPath: '/static/'
+		publicPath: '/static/'
 	},
 	plugins: [
-	    new webpack.HotModuleReplacementPlugin(),
-	    new webpack.NoErrorsPlugin()
+			new webpack.HotModuleReplacementPlugin(),
+			new webpack.NoErrorsPlugin()
 	],
 	module: {
 		loaders: [
 			{
 				test: /\.js$/,
-	      exclude: ['node_modules'],
+				exclude: ['node_modules'],
 				loader: 'babel'
 			}
 		]

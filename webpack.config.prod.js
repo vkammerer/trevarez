@@ -10,7 +10,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'static'),
 		filename: '[name].js',
-    publicPath: '/static/'
+		publicPath: '/static/'
 	},
 	resolve: {
 		alias: {
@@ -30,13 +30,13 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.js$/,
-	      exclude: ['node_modules'],
+				exclude: ['node_modules'],
 				loader: 'babel',
 				query: {compact: false} 
 			}
 		],
-    noParse: [
+		noParse: [
 			/node_modules\/react\//
-    ]
+		]
 	}
 };

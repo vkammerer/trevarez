@@ -9,18 +9,18 @@ const app = express();
 const compiler = webpack(config);
 
 app.use(webpackDevMiddleware(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
+	noInfo: true,
+	publicPath: config.output.publicPath
 }));
 
 app.use(webpackHotMiddleware(compiler));
 
 app.use(express.static('static'));
 
-app.listen(8080, 'localhost', function(err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log('Listening at http://localhost:8080');
+app.listen(8080, 'localhost', (err) => {
+	if (err) {
+		console.log(err);
+		return;
+	}
+	console.log('Listening at http://localhost:8080');
 });
