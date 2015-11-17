@@ -1,0 +1,4 @@
+.vincent {
+	background: red;
+  composes: tester from "./global.css";
+}

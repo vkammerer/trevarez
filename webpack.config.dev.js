@@ -11,9 +11,12 @@ module.exports = {
 		path: path.join(__dirname, 'static'),
 		filename: '[name].js'
 	},
+	resolve: {
+    extensions: ['', '.js', '.jsx', '.css']
+	},
 	plugins: [
-			new webpack.HotModuleReplacementPlugin(),
-			new webpack.NoErrorsPlugin()
+		new webpack.HotModuleReplacementPlugin(),
+		new webpack.NoErrorsPlugin()
 	],
 	module: {
 		loaders: [
@@ -21,6 +24,10 @@ module.exports = {
 				test: /\.js|\.jsx$/,
 				exclude: ['node_modules'],
 				loader: 'babel'
+			},
+			{
+				test: /\.css$/,
+				loader: "style-loader!css-loader?modules"
 			}
 		]
 	}

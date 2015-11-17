@@ -1,5 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 let pathToReact = path.resolve('node_modules', 'react/dist/react.min.js');
 let pathToReactDom = path.resolve('node_modules', 'react-dom/dist/react-dom.min.js');
 
@@ -13,6 +14,7 @@ module.exports = {
 		publicPath: '/static/'
 	},
 	resolve: {
+    extensions: ['', '.js', '.jsx', '.css'],
 		alias: {
 			'react': pathToReact,
 			'react-dom': pathToReactDom
@@ -24,7 +26,8 @@ module.exports = {
 			compress: {
 				warnings: false
 			}
-		})
+		}),
+		new ExtractTextPlugin('[name].css')		
 	],
 	module: {
 		loaders: [
@@ -33,6 +36,10 @@ module.exports = {
 				exclude: ['node_modules'],
 				loader: 'babel',
 				query: {compact: false} 
+			},
+			{
+				test: /\.css$/,
+				loader: ExtractTextPlugin.extract("style-loader", "css-loader?modules")
 			}
 		],
 		noParse: [
