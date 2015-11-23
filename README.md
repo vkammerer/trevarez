@@ -12,9 +12,20 @@ npm i
 npm run dev
 ```
 
-### Build
+### Web Build
 ```
 npm run build
+```
+
+### App Build
+OSX:
+```
+npm run build:osx
+```
+
+Windows
+```
+npm run build:win
 ```
 
 ### Deployment
