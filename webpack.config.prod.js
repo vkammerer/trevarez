@@ -14,7 +14,7 @@ module.exports = {
 		publicPath: '/static/'
 	},
 	resolve: {
-    extensions: ['', '.js', '.jsx', '.css'],
+	extensions: ['', '.js', '.jsx', '.css'],
 		alias: {
 			'react': pathToReact,
 			'react-dom': pathToReactDom
@@ -27,7 +27,7 @@ module.exports = {
 				warnings: false
 			}
 		}),
-		new ExtractTextPlugin('[name].css')		
+		new ExtractTextPlugin('[name].css')
 	],
 	module: {
 		loaders: [
@@ -35,7 +35,7 @@ module.exports = {
 				test: /\.js|\.jsx$/,
 				exclude: ['node_modules'],
 				loader: 'babel',
-				query: {compact: false} 
+				query: {compact: false}
 			},
 			{
 				test: /\.css$/,

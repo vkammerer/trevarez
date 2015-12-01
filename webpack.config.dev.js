@@ -12,7 +12,7 @@ module.exports = {
 		filename: '[name].js'
 	},
 	resolve: {
-    extensions: ['', '.js', '.jsx', '.css']
+		extensions: ['', '.js', '.jsx', '.css']
 	},
 	plugins: [
 		new webpack.optimize.OccurenceOrderPlugin(),
