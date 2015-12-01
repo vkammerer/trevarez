@@ -1,14 +1,28 @@
 .common {
 	position: absolute;
 	background: blue;
+	width: 10%;
+	height: 10%;
 }
-.initial {
-	width: 20px;
-	height: 20px;
+.expanded {
+	left: 2% !important;
+	top: 2% !important;
+	right: 2% !important;
+	bottom: 2% !important;
+	width: auto;
+	height: auto;
 }
-.final {
-	left: 10px;
-	top: 10px;
-	right: 10px;
-	bottom: 10px;
+.expand {
+	height: 10%;
+	background: red;
+}
+.contract {
+	height: 10%;
+	background: green;
+}
+:global(.teleporter-active) {
+	z-index: 9
+}
+.selected {
+	z-index: 10
 }

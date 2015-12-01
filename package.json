@@ -13,8 +13,8 @@
     "installer:win": "electron-builder release/Trevarez-win32-x64 --platform=win --out=release/win --config=resources/config.json",
     "dev": "node server-dev.es5.js",
     "build": "webpack --config webpack.config.prod.es5.js",
-    "build:osx" : "npm run clean:osx && npm run release:osx && npm run installer:osx",
-    "build:win" : "npm run clean:win && npm run release:win && npm run installer:win",
+    "build:osx": "npm run clean:osx && npm run release:osx && npm run installer:osx",
+    "build:win": "npm run clean:win && npm run release:win && npm run installer:win",
     "deploy": "git subtree push --prefix static origin gh-pages"
   },
   "repository": {
@@ -38,6 +38,7 @@
     "react-dom": "^0.14.2",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
+    "teleporter": "0.0.4",
     "webpack": "^1.12.6",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.5.0"
