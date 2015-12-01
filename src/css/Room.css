@@ -1,4 +1,14 @@
-.vincent {
-	background: red;
-  composes: tester from "./global.css";
+.common {
+	position: absolute;
+	background: blue;
+}
+.initial {
+	width: 20px;
+	height: 20px;
+}
+.final {
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
 }

@@ -15,6 +15,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx', '.css']
 	},
 	plugins: [
+		new webpack.optimize.OccurenceOrderPlugin(),
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin()
 	],

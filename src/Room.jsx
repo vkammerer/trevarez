@@ -11,9 +11,10 @@ export default class Room extends React.Component {
 	}
 	render() {
 		return (
-			<div>
-				<div className={RoomCss.vincent}>vincent</div>
-
+			<div className={RoomCss.common}>
+				<div className={RoomCss.again}>
+					${this.props.children}
+				</div>
 			</div>
 		);
 	}
