@@ -1,12 +1,12 @@
 .app {
-  max-width: 160vh;
+	max-width: 160vh;
 	background: url('/img/chateau.png') center center;
 	background-size: contain;
 	margin: auto;
 }
 
 .app:after {
-  content: '';
-  display: block;
-  padding-top: 62.50%;
+	content: '';
+	display: block;
+	padding-top: 62.50%;
 }
