@@ -10,7 +10,6 @@ export default class App extends React.Component {
 		}
 	}
 	roomSelection(roomName) {
-		console.log(roomName)
 		this.setState({selectedRoom: roomName});
 	}
 	render() {
@@ -24,23 +23,23 @@ export default class App extends React.Component {
 				<Room
 					rooms={rooms}
 					room={{
-						name: 'cuisine',
-						top: 20,
-						left: 20
+						name: 'lingerie',
+						top: 29,
+						left: 15
 					}}>
 					<div>
-						Cuisine
+						<h1>Lingerie</h1>
 					</div>
 				</Room>
 				<Room
 					rooms={rooms}
 					room={{
-						name: 'garage',
-						top: 10,
-						left: 0
+						name: 'argenterie',
+						top: 56,
+						left: 24
 					}}>
 					<div>
-						Garage
+						<h1>Argenterie</h1>
 					</div>
 				</Room>
 			</div>

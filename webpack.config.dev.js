@@ -27,7 +27,7 @@ module.exports = {
 				loader: 'babel'
 			},
 			{
-				test: /\.png$/,
+				test: /\.png|\.jpg$/,
 				loader: 'file-loader?name=img/[name].[ext]'
 			},
 			{

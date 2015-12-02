@@ -8,6 +8,7 @@ export default class Room extends React.Component {
 		super(props);
 		this.expand = this.expand.bind(this);
 		this.contract = this.contract.bind(this);
+		this.imageStyle = {backgroundImage: `url(img/${this.props.room.name}.jpg)`}
 	}
 	expand(){
 		if (this.props.rooms.selectedRoom !== this.props.room.name) {
@@ -22,7 +23,11 @@ export default class Room extends React.Component {
 	componentDidMount() {
 		this.teleporter = new Teleporter({
 			selector: `#${this.refs.roomRoot.id}`,
-			sizeClass: RoomCss.expanded
+			sizeClass: RoomCss.expanded,
+			animation: {
+				duration: 600,
+				easing: 'cubic-bezier(0,0,0.32,1)'
+			}
 		})
 	}
 	componentDidUpdate(prevProps){
@@ -40,7 +45,7 @@ export default class Room extends React.Component {
 	}
 	render() {
 		let roomClass = classNames({
-			[RoomCss.common]: true,
+			[RoomCss.room]: true,
 			[RoomCss.selected]: this.props.rooms.selectedRoom === this.props.room.name
 		});
 		return (
@@ -52,7 +57,8 @@ export default class Room extends React.Component {
 					top: `${this.props.room.top}%`,
 					left: `${this.props.room.left}%`
 				}}>
-				<div>
+				<div
+					className={RoomCss.content}>
 					<div
 						onClick={this.expand}
 						className={RoomCss.expand}>
@@ -61,8 +67,10 @@ export default class Room extends React.Component {
 					<div
 						onClick={this.contract}
 						className={RoomCss.contract}>
-						Contract
+						Close
 					</div>
+					<div className={RoomCss.image}
+						style={this.imageStyle}></div>
 					{this.props.children}
 				</div>
 			</div>

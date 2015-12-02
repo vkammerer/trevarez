@@ -1,28 +1,59 @@
-.common {
+.room {
 	position: absolute;
-	background: blue;
-	width: 10%;
-	height: 10%;
+	width: 5%;
+	height: 5%;
+}
+.content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
 }
 .expanded {
-	left: 2% !important;
+	left: 1.25% !important;
 	top: 2% !important;
-	right: 2% !important;
+	right: 1.25% !important;
 	bottom: 2% !important;
 	width: auto;
 	height: auto;
 }
+.expand,
+.contract {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+}
 .expand {
-	height: 10%;
-	background: red;
+	left: 0;
+	bottom: 0;
 }
 .contract {
+	display: none;
 	height: 10%;
+	width: 10%;
 	background: green;
 }
 :global(.teleporter-active) {
 	z-index: 9
 }
-.selected {
-	z-index: 10
+.room.selected {
+	z-index: 10;
+}
+.room.selected .expand {
+	display: none
+}
+.room.selected .contract {
+	display: block;
+	text-align: center;
+}
+.image {
+	width: 61%;
+	height: 61%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
