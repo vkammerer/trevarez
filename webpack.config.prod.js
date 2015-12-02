@@ -11,7 +11,7 @@ module.exports = {
 	output: {
 		path: path.join(__dirname, 'static'),
 		filename: '[name].js',
-		publicPath: '/static/'
+		publicPath: ''
 	},
 	resolve: {
 	extensions: ['', '.js', '.jsx', '.css'],
@@ -36,6 +36,10 @@ module.exports = {
 				exclude: ['node_modules'],
 				loader: 'babel',
 				query: {compact: false}
+			},
+			{
+				test: /\.png$/,
+				loader: 'file-loader?name=img/[name].[ext]'
 			},
 			{
 				test: /\.css$/,
