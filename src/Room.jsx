@@ -8,7 +8,7 @@ export default class Room extends React.Component {
 		super(props);
 		this.expand = this.expand.bind(this);
 		this.contract = this.contract.bind(this);
-		this.imageStyle = {backgroundImage: `url(img/${this.props.room.name}.jpg)`}
+		this.imageStyle = {backgroundImage: `url(img/${this.props.room.name}.jpg)`};
 	}
 	expand(){
 		if (this.props.rooms.selectedRoom !== this.props.room.name) {
@@ -20,6 +20,9 @@ export default class Room extends React.Component {
 			this.props.rooms.roomSelection('');
 		}
 		return false;
+	}
+	insertContent() {
+		return {__html: this.props.room.content};
 	}
 	componentDidMount() {
 		this.teleporter = new Teleporter({
@@ -77,8 +80,9 @@ export default class Room extends React.Component {
 						className={RoomCss.contract}>
 						Close
 					</div>
-					<div className={RoomCss.text}>
-						{this.props.children}
+					<div
+						dangerouslySetInnerHTML={this.insertContent()}
+						className={RoomCss.text}>
 					</div>
 				</div>
 			</div>
