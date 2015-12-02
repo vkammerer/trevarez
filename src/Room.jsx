@@ -75,7 +75,7 @@ export default class Room extends React.Component {
 					<div
 						onClick={this.contract}
 						className={RoomCss.contract}>
-						Close
+						X
 					</div>
 					<div className={RoomCss.text}>
 						{this.props.children}
