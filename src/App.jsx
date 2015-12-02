@@ -7,6 +7,7 @@ import content from './content/content';
 export default class App extends React.Component {
 	constructor(props) {
 		super(props);
+		this.roomSelection = this.roomSelection.bind(this);
 		this.state = {
 			selectedRoom: '',
 			selectedLang: 'en'
@@ -19,7 +20,7 @@ export default class App extends React.Component {
 		let rooms = {
 			selectedRoom: this.state.selectedRoom,
 			selectedLang: this.state.selectedLang,
-			roomSelection: this.roomSelection.bind(this)
+			roomSelection: this.roomSelection
 		}
 		return (
 			<div
