@@ -2,15 +2,15 @@ import React from 'react';
 import Room from './Room';
 import AppCss from './css/App.css';
 
-import lingerieFr from './content/lingerie/lingerie_fr.md';
-import argenterieFr from './content/argenterie/argenterie_fr.md';
+import content from './content/content';
 
 export default class App extends React.Component {
 	constructor(props) {
 		super(props);
 		this.roomSelection = this.roomSelection.bind(this);
 		this.state = {
-			selectedRoom: ''
+			selectedRoom: '',
+			selectedLang: 'en'
 		}
 	}
 	roomSelection(roomName) {
@@ -19,6 +19,7 @@ export default class App extends React.Component {
 	render() {
 		let rooms = {
 			selectedRoom: this.state.selectedRoom,
+			selectedLang: this.state.selectedLang,
 			roomSelection: this.roomSelection
 		}
 		return (
@@ -30,7 +31,7 @@ export default class App extends React.Component {
 						name: 'lingerie',
 						top: 29,
 						left: 15,
-						content: lingerieFr
+						content: content.lingerie
 					}}>
 				</Room>
 				<Room
@@ -39,7 +40,7 @@ export default class App extends React.Component {
 						name: 'argenterie',
 						top: 56,
 						left: 24,
-						content: argenterieFr
+						content: content.argenterie
 					}}>
 				</Room>
 			</div>

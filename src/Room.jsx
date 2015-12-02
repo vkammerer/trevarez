@@ -21,8 +21,8 @@ export default class Room extends React.Component {
 		}
 		return false;
 	}
-	insertContent() {
-		return {__html: this.props.room.content};
+	insertContent(lang) {
+		return {__html: this.props.room.content[lang]};
 	}
 	componentDidMount() {
 		this.teleporter = new Teleporter({
@@ -32,9 +32,9 @@ export default class Room extends React.Component {
 				duration: 600,
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
-		})
+		});
 	}
-	componentDidUpdate(prevProps){
+	componentDidUpdate(prevProps) {
 		if (
 			(prevProps.rooms.selectedRoom !== this.props.rooms.selectedRoom) &&
 			(
@@ -58,6 +58,12 @@ export default class Room extends React.Component {
 			[RoomCss.room]: true,
 			[RoomCss.selected]: this.props.rooms.selectedRoom === this.props.room.name
 		});
+		let textClass = classNames({
+			[RoomCss.text]: true,
+			[RoomCss.langFr]: this.props.rooms.selectedLang === 'fr',
+			[RoomCss.langEn]: this.props.rooms.selectedLang === 'en',
+			[RoomCss.langBz]: this.props.rooms.selectedLang === 'bz'
+		});
 		return (
 			<div
 				onClick={this.expand}
@@ -80,9 +86,19 @@ export default class Room extends React.Component {
 						className={RoomCss.contract}>
 						X
 					</div>
-					<div
-						dangerouslySetInnerHTML={this.insertContent()}
-						className={RoomCss.text}>
+					<div className={textClass}>
+						<div
+							dangerouslySetInnerHTML={this.insertContent('fr')}
+							className={RoomCss.textFr}>
+						</div>
+						<div
+							dangerouslySetInnerHTML={this.insertContent('en')}
+							className={RoomCss.textEn}>
+						</div>
+						<div
+							dangerouslySetInnerHTML={this.insertContent('bz')}
+							className={RoomCss.textBz}>
+						</div>
 					</div>
 				</div>
 			</div>
