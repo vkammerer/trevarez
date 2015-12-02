@@ -2,14 +2,35 @@
 	position: absolute;
 	width: 5%;
 	height: 5%;
+	color: white;
 }
+
+.room:after {
+	position: absolute;
+	content: '';
+  opacity: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 1;
+  transition: opacity 0.4s ease-out;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.room:active:after,
+.room.selected:after,
+.room:global(.teleporter-active):after {
+  transition: opacity 0.2s ease-out;
+  opacity: 0;
+}
+
 .content {
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: white;
+	background: #333;
 	box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
 }
 .expanded {

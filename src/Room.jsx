@@ -19,6 +19,7 @@ export default class Room extends React.Component {
 		if (this.props.rooms.selectedRoom === this.props.room.name) {
 			this.props.rooms.roomSelection('');
 		}
+		return false;
 	}
 	componentDidMount() {
 		this.teleporter = new Teleporter({
@@ -39,7 +40,13 @@ export default class Room extends React.Component {
 			)
 		) {
 			let steps = this.props.rooms.selectedRoom === this.props.room.name ?
-				['', RoomCss.expanded] : [RoomCss.expanded, ''];
+				['', {
+					class: RoomCss.expanded,
+					animation: {
+						duration: 600,
+						easing: 'cubic-bezier(0,0,0.32,1)'
+					}
+				}] : [RoomCss.expanded, ''];
 			this.teleporter.teleport(steps);
 		}
 	}
@@ -50,6 +57,7 @@ export default class Room extends React.Component {
 		});
 		return (
 			<div
+				onClick={this.expand}
 				ref='roomRoot'
 				id={this.props.room.name}
 				className={roomClass}
@@ -60,7 +68,6 @@ export default class Room extends React.Component {
 				<div
 					className={RoomCss.content}>
 					<div
-						onClick={this.expand}
 						className={RoomCss.expand}>
 						Expand
 					</div>
