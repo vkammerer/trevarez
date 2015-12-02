@@ -1,4 +1,4 @@
-# Argenterie
+# Argenterie en
 
 Cette pièce est le domaine réservé du maître d'hôtel ou du majordome qui est responsable de l'argenterie.
 

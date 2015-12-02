@@ -8,21 +8,21 @@
 .room:after {
 	position: absolute;
 	content: '';
-  opacity: 0;
+	opacity: 0;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	opacity: 1;
-  transition: opacity 0.25s ease-out;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  outline: 1px solid #888;
+	transition: opacity 0.25s ease-out;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	outline: 1px solid #888;
 }
 .room:active:after,
 .room.selected:after,
 .room:global(.teleporter-active):after {
-  transition: opacity 0.2s ease-out;
-  opacity: 0;
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
 }
 
 .content {
@@ -79,9 +79,13 @@
 }
 
 .text {
+	background: blue;
+}
+
+.text > div {
 	line-height: 130%;
 	font-size: 1.1vw;
-  font-family: 'din-regular';
+	font-family: 'din-regular';
 	position: absolute;
 	background: rgba(255,255,255,0.8);
 	width: 33%;
@@ -89,6 +93,17 @@
 	bottom: 10%;
 	right: 0;
 	padding: 2%;
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
+}
+.text.langFr .textFr {
+	opacity: 1;
+}
+.text.langEn .textEn {
+	opacity: 1;
+}
+.text.langBz .textBz {
+	opacity: 1;
 }
 h1 {
 	margin: 0
