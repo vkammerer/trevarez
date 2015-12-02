@@ -18,3 +18,7 @@ body {
 	vertical-align: middle;
 }
 
+@font-face {
+    font-family: 'din-regular';
+    src: url('../../static/din-regular.woff') format('woff');
+}

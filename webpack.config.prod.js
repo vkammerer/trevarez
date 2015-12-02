@@ -38,6 +38,10 @@ module.exports = {
 				query: {compact: false}
 			},
 			{
+				test: /\.woff$/,
+				loader: 'file-loader?name=[name].[ext]'
+			},
+			{
 				test: /\.png|\.jpg$/,
 				loader: 'file-loader?name=img/[name].[ext]'
 			},

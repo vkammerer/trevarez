@@ -66,7 +66,8 @@ export default class Room extends React.Component {
 					left: `${this.props.room.left}%`
 				}}>
 				<div
-					className={RoomCss.content}>
+					className={RoomCss.content}
+						style={this.imageStyle}>
 					<div
 						className={RoomCss.expand}>
 						Expand
@@ -76,9 +77,9 @@ export default class Room extends React.Component {
 						className={RoomCss.contract}>
 						Close
 					</div>
-					<div className={RoomCss.image}
-						style={this.imageStyle}></div>
-					{this.props.children}
+					<div className={RoomCss.text}>
+						{this.props.children}
+					</div>
 				</div>
 			</div>
 		);

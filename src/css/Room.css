@@ -2,7 +2,7 @@
 	position: absolute;
 	width: 5%;
 	height: 5%;
-	color: white;
+	color: #444;
 }
 
 .room:after {
@@ -14,8 +14,9 @@
 	left: 0;
 	right: 0;
 	opacity: 1;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.25s ease-out;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  outline: 1px solid #888;
 }
 .room:active:after,
 .room.selected:after,
@@ -30,8 +31,10 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: #333;
-	box-shadow: 0 0 15px 0 rgba(0,0,0,0.4);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0 0 0px 0 rgba(0,0,0,0.4);
 }
 .expanded {
 	left: 1.25% !important;
@@ -64,6 +67,9 @@
 .room.selected {
 	z-index: 10;
 }
+.room.selected .content {
+	box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
+}
 .room.selected .expand {
 	display: none
 }
@@ -71,10 +77,19 @@
 	display: block;
 	text-align: center;
 }
-.image {
-	width: 61%;
-	height: 61%;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
+
+.text {
+	line-height: 130%;
+	font-size: 1.1vw;
+  font-family: 'din-regular';
+	position: absolute;
+	background: rgba(255,255,255,0.8);
+	width: 33%;
+	top: 10%;
+	bottom: 10%;
+	right: 0;
+	padding: 2%;
+}
+h1 {
+	margin: 0
 }
