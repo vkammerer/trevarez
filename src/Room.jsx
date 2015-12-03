@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import Teleporter from 'teleporter';
 import RoomCss from './css/Room.css';
+import TextCss from './css/Text.css';
 
 export default class Room extends React.Component {
 	constructor(props) {
@@ -47,7 +48,8 @@ export default class Room extends React.Component {
 					class: RoomCss.expanded,
 					animation: {
 						duration: 600,
-						easing: 'cubic-bezier(0,0,0.32,1)'
+						easing: 'cubic-bezier(0,0,0.32,1)',
+						delay: 400
 					}
 				}] : [RoomCss.expanded, ''];
 			this.teleporter.teleport(steps);
@@ -59,10 +61,10 @@ export default class Room extends React.Component {
 			[RoomCss.selected]: this.props.rooms.selectedRoom === this.props.room.name
 		});
 		let textClass = classNames({
-			[RoomCss.text]: true,
-			[RoomCss.langFr]: this.props.rooms.selectedLang === 'fr',
-			[RoomCss.langEn]: this.props.rooms.selectedLang === 'en',
-			[RoomCss.langBz]: this.props.rooms.selectedLang === 'bz'
+			[TextCss.text]: true,
+			[TextCss.langFr]: this.props.rooms.selectedLang === 'fr',
+			[TextCss.langEn]: this.props.rooms.selectedLang === 'en',
+			[TextCss.langBz]: this.props.rooms.selectedLang === 'bz'
 		});
 		return (
 			<div
@@ -74,6 +76,7 @@ export default class Room extends React.Component {
 					top: `${this.props.room.top}%`,
 					left: `${this.props.room.left}%`
 				}}>
+				<div className={RoomCss.segment}></div>
 				<div
 					className={RoomCss.content}
 						style={this.imageStyle}>
@@ -84,20 +87,19 @@ export default class Room extends React.Component {
 					<div
 						onClick={this.contract}
 						className={RoomCss.contract}>
-						X
 					</div>
 					<div className={textClass}>
 						<div
 							dangerouslySetInnerHTML={this.insertContent('fr')}
-							className={RoomCss.textFr}>
+							className={TextCss.textFr}>
 						</div>
 						<div
 							dangerouslySetInnerHTML={this.insertContent('en')}
-							className={RoomCss.textEn}>
+							className={TextCss.textEn}>
 						</div>
 						<div
 							dangerouslySetInnerHTML={this.insertContent('bz')}
-							className={RoomCss.textBz}>
+							className={TextCss.textBz}>
 						</div>
 					</div>
 				</div>

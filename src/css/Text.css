@@ -1,0 +1,27 @@
+.text {
+	background: blue;
+}
+
+.text > div {
+	line-height: 130%;
+	font-size: 1.2vw;
+	font-family: 'din-regular';
+	position: absolute;
+	background: rgba(255,255,255,0.85);
+	width: 33%;
+	top: 20%;
+	bottom: 0;
+	right: 0;
+	padding: 2%;
+	transition: opacity 0.2s ease-out;
+	opacity: 0;
+}
+.text.langFr .textFr {
+	opacity: 1;
+}
+.text.langEn .textEn {
+	opacity: 1;
+}
+.text.langBz .textBz {
+	opacity: 1;
+}

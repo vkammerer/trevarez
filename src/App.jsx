@@ -38,8 +38,8 @@ export default class App extends React.Component {
 					rooms={rooms}
 					room={{
 						name: 'argenterie',
-						top: 56,
-						left: 24,
+						top: 55,
+						left: 23,
 						content: content.argenterie
 					}}>
 				</Room>
