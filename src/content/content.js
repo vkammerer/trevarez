@@ -41,7 +41,7 @@ export default {
 		en: chambreEn,
 		bz: chambreBz
 	},
-	grandeCuisine: {
+	grande_cuisine: {
 		fr: grandeCuisineFr,
 		en: grandeCuisineEn,
 		bz: grandeCuisineBz
@@ -51,17 +51,22 @@ export default {
 		en: lingerieEn,
 		bz: lingerieBz
 	},
-	salleAManger: {
+	salle_a_manger: {
 		fr: salleAMangerFr,
 		en: salleAMangerEn,
 		bz: salleAMangerBz
 	},
-	salleDeReunion: {
+	salle_de_bain: {
+		fr: salleDeBainFr,
+		en: salleDeBainEn,
+		bz: salleDeBainBz
+	},
+	salle_de_reunion: {
 		fr: salleDeReunionFr,
 		en: salleDeReunionEn,
 		bz: salleDeReunionBz
 	},
-	salleDesFermiers: {
+	salle_des_fermiers: {
 		fr: salleDesFermiersFr,
 		en: salleDesFermiersEn,
 		bz: salleDesFermiersBz

@@ -10,6 +10,7 @@ export default class Room extends React.Component {
 		this.expand = this.expand.bind(this);
 		this.contract = this.contract.bind(this);
 		this.imageStyle = {backgroundImage: `url(img/${this.props.room.name}.jpg)`};
+		this.segmentStyle = {transform: `rotate(${this.props.room.segment}deg)`};
 	}
 	expand(){
 		if (this.props.rooms.selectedRoom !== this.props.room.name) {
@@ -76,10 +77,11 @@ export default class Room extends React.Component {
 					top: `${this.props.room.top}%`,
 					left: `${this.props.room.left}%`
 				}}>
-				<div className={RoomCss.segment}></div>
+				<div className={RoomCss.segment}
+					style={this.segmentStyle}></div>
 				<div
 					className={RoomCss.content}
-						style={this.imageStyle}>
+					style={this.imageStyle}>
 					<div
 						className={RoomCss.expand}>
 						Expand
