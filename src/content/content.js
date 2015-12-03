@@ -1,34 +1,34 @@
-import argenterieFr from './argenterie/argenterie_fr.md';
-import argenterieEn from './argenterie/argenterie_en.md';
-import argenterieBz from './argenterie/argenterie_bz.md';
+import argenterieFr from './argenterie/fr.md';
+import argenterieEn from './argenterie/en.md';
+import argenterieBz from './argenterie/bz.md';
 
-import chambreFr from './chambre/chambre_fr.md';
-import chambreEn from './chambre/chambre_en.md';
-import chambreBz from './chambre/chambre_bz.md';
+import chambreFr from './chambre/fr.md';
+import chambreEn from './chambre/en.md';
+import chambreBz from './chambre/bz.md';
 
-import grandeCuisineFr from './grande_cuisine/grande_cuisine_fr.md';
-import grandeCuisineEn from './grande_cuisine/grande_cuisine_en.md';
-import grandeCuisineBz from './grande_cuisine/grande_cuisine_bz.md';
+import grandeCuisineFr from './grande_cuisine/fr.md';
+import grandeCuisineEn from './grande_cuisine/en.md';
+import grandeCuisineBz from './grande_cuisine/bz.md';
 
-import lingerieFr from './lingerie/lingerie_fr.md';
-import lingerieEn from './lingerie/lingerie_en.md';
-import lingerieBz from './lingerie/lingerie_bz.md';
+import lingerieFr from './lingerie/fr.md';
+import lingerieEn from './lingerie/en.md';
+import lingerieBz from './lingerie/bz.md';
 
-import salleAMangerFr from './salle_a_manger/salle_a_manger_fr.md';
-import salleAMangerEn from './salle_a_manger/salle_a_manger_en.md';
-import salleAMangerBz from './salle_a_manger/salle_a_manger_bz.md';
+import salleAMangerFr from './salle_a_manger/fr.md';
+import salleAMangerEn from './salle_a_manger/en.md';
+import salleAMangerBz from './salle_a_manger/bz.md';
 
-import salleDeBainFr from './salle_de_bain/salle_de_bain_fr.md';
-import salleDeBainEn from './salle_de_bain/salle_de_bain_en.md';
-import salleDeBainBz from './salle_de_bain/salle_de_bain_bz.md';
+import salleDeBainFr from './salle_de_bain/fr.md';
+import salleDeBainEn from './salle_de_bain/en.md';
+import salleDeBainBz from './salle_de_bain/bz.md';
 
-import salleDeReunionFr from './salle_de_reunion/salle_de_reunion_fr.md';
-import salleDeReunionEn from './salle_de_reunion/salle_de_reunion_en.md';
-import salleDeReunionBz from './salle_de_reunion/salle_de_reunion_bz.md';
+import salleDeReunionFr from './salle_de_reunion/fr.md';
+import salleDeReunionEn from './salle_de_reunion/en.md';
+import salleDeReunionBz from './salle_de_reunion/bz.md';
 
-import salleDesFermiersFr from './salle_des_fermiers/salle_des_fermiers_fr.md';
-import salleDesFermiersEn from './salle_des_fermiers/salle_des_fermiers_en.md';
-import salleDesFermiersBz from './salle_des_fermiers/salle_des_fermiers_bz.md';
+import salleDesFermiersFr from './salle_des_fermiers/fr.md';
+import salleDesFermiersEn from './salle_des_fermiers/en.md';
+import salleDesFermiersBz from './salle_des_fermiers/bz.md';
 
 export default {
 	argenterie: {
