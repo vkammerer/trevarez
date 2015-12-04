@@ -1,5 +1,5 @@
-# Chambre de domestique
+# Kampr ur mevel
 
-Une partie des domestiques loge dans les chambres du 3e étage. Le château dispose d'une vingtaine de chambres toutes équipées d'un ou deux lits, d'une cheminée, d'un radiateur, d'un petit cabinet de toilette et de l'électricité. À cet étage, il y a au moins trois WC.
+Lod deus ar vevelien a vez lojet ba kampchoù an drivet estaj. Bar maner zo un ugent kampr bennaket, ha zo ur gwele pe daou, ur chiminal, un dommerez, ur gabined vihan ha gouloù ba pep heni deuzoute. Ban estaj-se zo teir gabined da vihanañ.
 
-Un tableau des sonnettes est probablement installé dans le couloir. Ce qui assure au propriétaire et à ses invités d'être servis même la nuit.
+Moarhat zo un daolennad sonetezoù bar c'houlouer. Mod-se ar mestr hag an dud zo bet pedet gantoñ a c'hall bezañ jervijet deus an noz ive.

@@ -1,8 +1,5 @@
 # Lingerie
 
-Cet étage est le domaine de la lingère, responsable du linge de maison et éventuellement des vêtements de ses maîtres.
+This floor was the domain of the linen-maid who was responsible for the household linen and possibly the clothes of the owners. 
 
-Dans une des quatre pièces, une cheminée dispose d'un emplacement pour faire chauffer les fers à repasser.
-De grands placards occupent une bonne partie de l'espace, mais ce n'est rien comparé aux pièces du niveau inférieur qui en sont remplies.
-
-Le carnet que tient la lingère jusqu'en 1910 répertorie pas moins d'une centaine de draps et plus de trois cents nappes de tous types : grandes ou petites pour les plateaux des petits déjeuners ou les dessus de buffets, damassées, blanches ou décorées de guirlandes de roses…
+In one of the four rooms a fireplace had a place for heating up irons. Large cupboards occupied a good part of the space here, but this was nothing compared to the rooms on the lower level which were full of them. The notebook which the linen-maid kept until 1910 records no less than a hundred sheets and more than three hundred tablecloths of all types: large or small for the breakfast trays or the top of the sideboards, damask, white or decorated with garlands of roses…

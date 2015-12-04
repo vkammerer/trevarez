@@ -1,5 +1,5 @@
-# Grande cuisine
+# Great kitchen
 
-La cuisine est à la hauteur des ambitions de James de Kerjégu pour le château. Elle est grande, bien éclairée, saine et ses équipements sont à la pointe de l'innovation.
+The kitchen shows the height of James de Kerjegu's ambitions for the château. It is large, well-lit, hygienic and fitted with state-of-the-art equipment.
 
-Le chef cuisinier, aidé de ses deux commis, pratique son art sur le grand fourneau central. Il fonctionne au charbon, car la tradition culinaire veut que la cuisson sur ce type de « piano » en fonte, dans des casseroles de cuivre soit infiniment supérieure à celle des cuisinières fonctionnant au gaz ou à l'électricité.
+The head chef, aided by two commis chefs, practised his art at the great central cooking station. It was coal-powered, because the culinary tradition dictated that cooking on this type of cast-iron "piano" with copper saucepans was infinitely superior to that of gas or electric cookers.

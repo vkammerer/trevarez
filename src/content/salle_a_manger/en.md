@@ -1,5 +1,5 @@
-# Salle à manger des gens
+# Servants' dining-hall
 
-Cette salle peut recevoir une vingtaine de personnes. La préparation des repas des domestiques ne perturbe en aucun cas le service à la table des maîtres, puisque qu'il existe une seconde cuisine où cuisinière et fille de cuisine mitonnent les plats.
+This room could hold about twenty people. The preparation of meals for the servants in no way interfered with service at the master's table, since there was a second kitchen for cooking where the cook and kitchen maid could prepare their dishes.
 
-La pièce chauffée par un grand poêle en faïence blanche est meublée d'un buffet en bois comportant vingt-quatre casiers numérotés où chaque employé peut conserver ses affaires personnelles : serviette, bol, médecines….
+The room was heated by a large white earthenware stove and furnished with a wooden sideboard holding twenty-four numbered lockers where each employee could keep their personal things: napkin, bowl, medicines…
