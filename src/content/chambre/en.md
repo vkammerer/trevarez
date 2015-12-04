@@ -1,5 +1,5 @@
-# Chambre de domestique
+# Servant's bedroom
 
-Une partie des domestiques loge dans les chambres du 3e étage. Le château dispose d'une vingtaine de chambres toutes équipées d'un ou deux lits, d'une cheminée, d'un radiateur, d'un petit cabinet de toilette et de l'électricité. À cet étage, il y a au moins trois WC.
+Some of the servants had bedrooms on the third floor. The château had twenty-odd rooms equipped with one or two beds, a fireplace, a radiator, a small wash-room and electricity. On this floor there were at least three toilets.
 
-Un tableau des sonnettes est probablement installé dans le couloir. Ce qui assure au propriétaire et à ses invités d'être servis même la nuit.
+In the corridor there was probably a bell board, to ensure that the owner and his guests could call for service even at night.

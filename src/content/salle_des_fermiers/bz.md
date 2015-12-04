@@ -1,7 +1,7 @@
-# Salle des fermiers ou réserve du jardinier
+# Sal evit miret ar bouedajoù produet ba Trevarez
 
-Dans cette salle une partie des provisions en provenance des fermes et du potager du domaine est entreposée avant d'être répartie dans les différents garde-manger : pour le gibier, le poisson, les légumes…
+Bar zal-mañ a vez miret un tamm deus ar boued a teu deus ar feurmoù ha deus ar liorzh legumaj. Goude-ze a vez laket an traoù-se, hervez petra int, ba meur a bres-boued : unan evit ar jibier,un all evit ar pesked, un all evit ar legumaj…
 
-Au centre de la pièce trône une cabane en bois et liège, ancêtre de nos congélateurs. Grâce à cette machine qui compresse un gaz pour produire du froid, le château dispose d'une réserve de blocs de glace, utilisée dans des armoires froides.
+Ba kreiz ar zal zo ur gabanenn koad ha lech - ur c’hoñjelateur mod-kozh. Gras d’ar mekanik-se ha a wask ur gaz evit ober aer yen, bar maner zo ur bern blokadoù skorn ha a vez laket ba presoù yen.
 
-C'est ici aussi qu'arrive l'électricité produite dans l'usine électrique installée dans les écuries.
+Ahe ive a teu ar gouloù a vez graet gant an uzin-gouloù zo bar marchosi.

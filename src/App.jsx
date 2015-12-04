@@ -1,32 +1,21 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Room from './Room';
+import LangSelector from './LangSelector';
 import AppCss from './css/App.css';
 
 import content from './content/content';
 
-export default class App extends React.Component {
+class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.roomSelection = this.roomSelection.bind(this);
-		this.state = {
-			selectedRoom: '',
-			selectedLang: 'en'
-		}
-	}
-	roomSelection(roomName) {
-		this.setState({selectedRoom: roomName});
 	}
 	render() {
-		let rooms = {
-			selectedRoom: this.state.selectedRoom,
-			selectedLang: this.state.selectedLang,
-			roomSelection: this.roomSelection
-		}
 		return (
 			<div
 				className={AppCss.app}>
+				<LangSelector />
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'argenterie',
 						top: 55,
@@ -36,7 +25,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'chambre',
 						top: 26,
@@ -46,7 +34,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'grande_cuisine',
 						top: 78,
@@ -56,7 +43,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'lingerie',
 						top: 29,
@@ -66,7 +52,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'salle_a_manger',
 						top: 80,
@@ -76,7 +61,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'salle_de_bain',
 						top: 26,
@@ -86,7 +70,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'salle_de_reunion',
 						top: 80,
@@ -96,7 +79,6 @@ export default class App extends React.Component {
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
 						name: 'salle_des_fermiers',
 						top: 83,
@@ -108,4 +90,6 @@ export default class App extends React.Component {
 			</div>
 		);
 	}
-}
+};
+
+export default connect((state) => { return state; })(App);

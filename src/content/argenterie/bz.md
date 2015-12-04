@@ -1,7 +1,7 @@
-# Argenterie
+# Sal arc'hantaj
 
-Cette pièce est le domaine réservé du maître d'hôtel ou du majordome qui est responsable de l'argenterie.
+Ne vize ken ‘met ar mestr-a-di ha ‘noa droed da vont bar zal-se, peogwir a oa e karg deus an arc'hantaj.
 
-Protégée par une porte blindée, la pièce est garnie de placards, gainés de tissu rouge à l'intérieur, spécialement aménagés pour ranger plats et couverts de valeur.
+Diwallet a oa gant un nor houarnet ; leun a oa ar zal-se gant presoù, golaet an diabarzh deuzoute gant danvez ruz, ha graet espres evit renkañ plajoù, fourchetezoù, kountilli ha loaioù a briz bras.
 
-Nichée dans l'entresol, l'argenterie est reliée aux offices de la cuisine et de la salle à manger par le passe-plat. Ainsi, plats et couverts circulent efficacement sans obliger les domestiques à emprunter l'escalier de service, ce qui en plus de les soulager, réduit les risques de casse et de vol.
+Ban entreleur ema ar zal-arc'hantaj, ha moaien a vez kas traoù deuzouti da banetirïoù ar gujun ha d'ar zal-dibiñ dre ar pasplad. Setu a vez aes kas ar plajoù hag an oustilhoù-taol, kuit d'ar vevelien da vont gant ar skalier bras : nebeutoc'h a labour a vez dehe, ha mod-se a vez nebeutoc'h a zañjer a vefe torret pe laeret traoù.

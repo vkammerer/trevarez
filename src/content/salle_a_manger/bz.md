@@ -1,5 +1,5 @@
-# Salle à manger des gens
+# Sal-dibiñ an dud
 
-Cette salle peut recevoir une vingtaine de personnes. La préparation des repas des domestiques ne perturbe en aucun cas le service à la table des maîtres, puisque qu'il existe une seconde cuisine où cuisinière et fille de cuisine mitonnent les plats.
+Un ugent den bennaket a c'hall dibiñ ba homañ. Ober boued evit ar vevelien ne zirenk ket ar jervij deus taol ar vistri, peogwir zo un eil kujun lec'h a vez graet boued gant ur gujunierez ha gant ur vatezh-kujun.
 
-La pièce chauffée par un grand poêle en faïence blanche est meublée d'un buffet en bois comportant vingt-quatre casiers numérotés où chaque employé peut conserver ses affaires personnelles : serviette, bol, médecines….
+Bar zal a vez tommet gant ur pikol tommerez failhañs wenn, zo ur bufed koad, ha zo ban-ennoñ pevar diret warn-ugent, numeroioù warne, lec'h a c'hall pep mevel renkañ e draoù : serviedenn, polenn, louzoù…

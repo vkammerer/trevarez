@@ -1,7 +1,7 @@
-# Salle des fermiers ou réserve du jardinier
+# Produce room or gardener's storeroom
 
-Dans cette salle une partie des provisions en provenance des fermes et du potager du domaine est entreposée avant d'être répartie dans les différents garde-manger : pour le gibier, le poisson, les légumes…
+Some of the produce from the estate farms and kitchen garden were placed in this room before being redistributed into the various pantries for game, fish, vegetables…
 
-Au centre de la pièce trône une cabane en bois et liège, ancêtre de nos congélateurs. Grâce à cette machine qui compresse un gaz pour produire du froid, le château dispose d'une réserve de blocs de glace, utilisée dans des armoires froides.
+At the centre of the room, a cabin of wood and cork, forerunner of our freezers, had pride of place. Thanks to this machine, which compressed gas to create low temperatures, the château always had a store of blocks of ice available for use in the cool cupboards.
 
-C'est ici aussi qu'arrive l'électricité produite dans l'usine électrique installée dans les écuries.
+This was also the entry point for electricity produced in the electric station in the stable-block.

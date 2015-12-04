@@ -1,5 +1,5 @@
-# Salle de bain des domestiques
+# Servant's bathroom
 
-L'usage de la baignoire est encore tout nouveau dans la société du début du 20e siècle, et pourtant, à Trévarez les domestiques peuvent prendre un bain dans une des deux salles de bain qui leur est réservée. Ils disposent aussi, comme les propriétaires et les invités, de chauffe-serviettes.
+Use of a bath-tub was still a new idea in early 20th century society, and yet at Trévarez the servants could have a bath in one of two bathrooms reserved for their use. These also had heated towel-rails, like those of the owner and guests.
 
-En 1907, il est très rare que les domestiques puissent disposer de salle de bain ou de WC. Bien souvent, en ville ils sont logés dans de minuscules chambres sous les toits et doivent se partager un unique WC mal entretenu.
+In 1907 it was very unusual for servants to have the use of a bathroom or toilet. Very often in town-houses they were lodged in tiny rooms under the eaves and had to share a single poorly maintained toilet.

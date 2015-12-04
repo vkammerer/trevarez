@@ -1,5 +1,5 @@
-# Grande cuisine
+# Kujun vras
 
-La cuisine est à la hauteur des ambitions de James de Kerjégu pour le château. Elle est grande, bien éclairée, saine et ses équipements sont à la pointe de l'innovation.
+Ar gujun vras a ziskouev penaos James de Kerjégu a faot dehoñ kaout tout an traoù modernañ ba e vaner. Frank, sklaer ha prop eo ar gujun, hag an aezamañchoù zo e-barzh eo ar re neveañ deus ar mare-se.
 
-Le chef cuisinier, aidé de ses deux commis, pratique son art sur le grand fourneau central. Il fonctionne au charbon, car la tradition culinaire veut que la cuisson sur ce type de « piano » en fonte, dans des casseroles de cuivre soit infiniment supérieure à celle des cuisinières fonctionnant au gaz ou à l'électricité.
+Ar penn-kujuner, gant sikour e zaou vevel-kujun, a ra boued war ar gujunierez-kreiz. Homañ a ya en-dro diwar c'hlaou, kar poazhet a vez kalz gwelloc'h ar boued war ur "piano" potin mod-se, ba kastolodennoù kouewr, evit war gujunierezoù dre gaz pe dre c'houloù.

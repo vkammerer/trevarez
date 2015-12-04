@@ -1,7 +1,7 @@
-# Argenterie en
+# The silverware room
 
-Cette pièce est le domaine réservé du maître d'hôtel ou du majordome qui est responsable de l'argenterie.
+This room was the preserve of the maitre d' or the butler who was responsible for the silverware.
 
-Protégée par une porte blindée, la pièce est garnie de placards, gainés de tissu rouge à l'intérieur, spécialement aménagés pour ranger plats et couverts de valeur.
+Protected by a reinforced door, the room was furnished with cupboards lined with red fabric, specially designed for holding valuable dishes and cutlery.
 
-Nichée dans l'entresol, l'argenterie est reliée aux offices de la cuisine et de la salle à manger par le passe-plat. Ainsi, plats et couverts circulent efficacement sans obliger les domestiques à emprunter l'escalier de service, ce qui en plus de les soulager, réduit les risques de casse et de vol.
+Tucked into a mezzanine level, the silverware room was connected to the kitchen area and the dining-room by means of a serving-hatch. This enabled the dishes and cutlery to pass from place to place efficiently without the servants having to use the service-stairs, and a further benefit was that it reduced the risk of breakages and theft.
