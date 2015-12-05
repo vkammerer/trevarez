@@ -32,3 +32,9 @@ npm run build:win
 ```
 npm run deploy
 ```
+
+### Release installer
+```
+npm version [major|minor|patch]
+git push && git push --tag
+```
