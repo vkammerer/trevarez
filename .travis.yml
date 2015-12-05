@@ -1,0 +1,16 @@
+language: node_js
+node_js:
+  - "4.0"
+before_install:
+  - sudo add-apt-repository ppa:ubuntu-wine/ppa -y
+  - sudo apt-get update -q
+  - sudo apt-get install wine nsis -y
+script: npm run build:win
+deploy:
+  provider: releases
+  api_key:
+    secure: fwVZLB9z93YId3RjJN0XohXrfvvgzGHd9UirQ6FH/c3Xm/3zPxl6YzDVJm2enZ/LGOmlcxZbWJbrhPSb4GWDVAVj6hJRu3PbdCsrc7kh+LqVjN4dkrLqK+ajYyaJZvUswwbkPahPgEBC3nFExvud0fQLYKhjMQzmKvXnOShs62zfcQVe6H5QN1QJqs8Z4nizEPLEZ+aVEHbI/2b2q2qgonfcvlesZEdSVICosEYXeenWZ3sEdUC43dCA7kzey+VBVIiKRPowtyPbu9j47UINDz+MDg+0pX8+zIXuYsv0cV1uZlA7LGIhIJJkHPNVA+biEaXncMuhhEDnPZKlsw8UFvrQ5hqw2uJayKSIZ5M2ODL4jaNS+ZLgxDTWpPaUwgLGp2JHAPMChgaiTqKocQZW39OR7P7RPmwTjkVOJ1LNueVwW1wZYVfSx7+FULPNdM2lRfW8XJpF2FgOSXRaegHQlaubwU0Lgti7gF2wqzwxvDXDePvIo1M0i5NTVz0xqPTm+tfAOmW+QMieZtB6gOrzv4k5f3+9stQXpMoZkL/79Djt+2lEsxZVun2oJ0LqspKqIQ/Nf/6MzVvnyKaZbldm3OQ32CfK4QAjpWwvGdTUQF3nOTtVA/RAwLwghdcXGxb4KtlUAZNqb/8NjXhWkWJsVD3UoQPK58/MHPOzIXgLF4M=
+  file: "release/win/Trevarez Setup.exe"
+  skip_cleanup: true
+  on:
+    tags: true
