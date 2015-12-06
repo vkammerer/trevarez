@@ -21,7 +21,7 @@
     "test": "mocha test/**/*.test.js* -R spec --compilers css:./test/misc/null-compiler,md:./test/misc/null-compiler,jsx:babel-core/register --recursive",
     "coverage": "istanbul cover --dir ./reports _mocha -- -R spec test/**/*.test.js* --compilers css:./test/misc/null-compiler,md:./test/misc/null-compiler,jsx:babel-core/register --recursive",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=b02ea30e27e20150c80e3e084f8b02bea77bb7fa0cbeaf8e73dbccd54a31085b codeclimate-test-reporter < reports/lcov.info",
-    "ci": "npm run clean && npm run coverage && npm run codeclimate"
+    "ci": "npm run clean && npm run coverage && npm run codeclimate && npm run build:win"
   },
   "repository": {
     "type": "git",

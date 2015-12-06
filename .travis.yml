@@ -5,7 +5,7 @@ before_install:
   - sudo add-apt-repository ppa:ubuntu-wine/ppa -y
   - sudo apt-get update -q
   - sudo apt-get install wine nsis -y
-script: npm run build:win
+script: npm run ci
 deploy:
   provider: releases
   api_key:
