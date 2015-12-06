@@ -6,7 +6,9 @@ import AppCss from './css/App.css';
 
 import content from './content/content';
 
-class App extends React.Component {
+// exported so we can write tests
+// see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components
+export class App extends React.Component {
 	constructor(props) {
 		super(props);
 	}

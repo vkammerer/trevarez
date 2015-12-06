@@ -5,7 +5,13 @@ import { SELECTED_LANG, SELECTED_ROOM, Lang } from './actions';
 function selectedLang(state = Lang.FR, action) {
 	switch (action.type) {
 		case SELECTED_LANG:
-			return action.lang;
+			let found = false;
+			for (let key in Lang) {
+				if (Lang[key] === action.lang) {
+					found = true;
+				}
+			}
+			return found ? action.lang : state;
 		default:
 			return state;
 	}
@@ -24,6 +30,6 @@ function selectedRoom(state = '', action) {
 const reducers = combineReducers({
 	selectedLang,
 	selectedRoom
-})
+});
 
 export default reducers;
