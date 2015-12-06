@@ -4,7 +4,9 @@ import { connect } from 'react-redux';
 import { selectLang, Lang } from './actions';
 import LangCss from './css/Lang.css';
 
-class LangSelector extends React.Component {
+// exported so we can write tests
+// see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components
+export class LangSelector extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -20,9 +22,9 @@ class LangSelector extends React.Component {
 			<div
 				className={langSelectorClass}>
 				<a href='#' onClick={ this.setLang.bind(this, Lang.FR) }>Fr</a>
-				-
+				<span>-</span>
 				<a href='#' onClick={ this.setLang.bind(this, Lang.EN) }>En</a>
-				-
+				<span>-</span>
 				<a href='#' onClick={ this.setLang.bind(this, Lang.BZ) }>Bz</a>
 			</div>
 		);

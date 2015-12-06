@@ -8,7 +8,9 @@ import LangSelector from './LangSelector';
 import RoomCss from './css/Room.css';
 import TextCss from './css/Text.css';
 
-class Room extends React.Component {
+// exported so we can write tests
+// see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components
+export class Room extends React.Component {
 	constructor(props) {
 		super(props);
 		this.expand = this.expand.bind(this);
