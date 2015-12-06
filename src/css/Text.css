@@ -1,27 +1,59 @@
-.text {
-	background: blue;
+h1 {
+	margin: 1vh 0 0;
+	line-height: 110%;
+	font-size: 1.6em;
 }
-
-.text > div {
+.text p:last-child {
+	margin-bottom: 0
+}
+.text {
 	line-height: 130%;
 	font-size: 1.2vw;
 	font-family: 'din-regular';
 	position: absolute;
-	background: rgba(255,255,255,0.85);
 	width: 33%;
 	top: 20%;
 	bottom: 0;
 	right: 0;
-	padding: 2%;
 	transition: opacity 0.2s ease-out;
-	opacity: 0;
+	overflow: hidden;
 }
-.text.langFr .textFr {
-	opacity: 1;
+.text .textFr,
+.text .textEn,
+.text .textBz {
+	background: rgba(255,255,255,0.85);
+	display: none;
+	padding: 6%;
 }
-.text.langEn .textEn {
-	opacity: 1;
-}
+.text.langFr .textFr,
+.text.langEn .textEn,
 .text.langBz .textBz {
-	opacity: 1;
+	display: block;
+}
+
+.lang {
+	overflow: hidden;
+	position: relative;
+}
+.lang > a {
+	display: inline-block;
+	width: 33%;
+  padding: 3% 6%;
+	background: rgba(240,240,240,0.85);
+	text-align: center;
+	z-index: 11;
+	position: relative;
+}
+.text.langFr .langOptionFr,
+.text.langEn .langOptionEn,
+.text.langBz .langOptionBz {
+	background: rgba(255,255,255,0.85);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	z-index: 12
+}
+.text .langOptionBz {
+	width: 34%;
+}
+.lang > a > img {
+	max-height: 1.8vh;
 }
