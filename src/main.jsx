@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import globalCss from './css/global';
 import App from './App';
 import reducers from './reducers';
 
