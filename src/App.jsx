@@ -14,7 +14,6 @@ class App extends React.Component {
 		return (
 			<div
 				className={AppCss.app}>
-				<LangSelector />
 				<Room
 					room={{
 						name: 'argenterie',

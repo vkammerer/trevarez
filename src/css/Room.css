@@ -42,8 +42,8 @@
 }
 .segment:after {
 	content: '';
-	width: 25vh;
-	height: 25vh;
+	width: 32vh;
+	height: 32vh;
 	background: black;
 	position: absolute;
 	right: -5%;
