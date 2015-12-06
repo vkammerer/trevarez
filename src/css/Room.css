@@ -4,27 +4,64 @@
 	height: 5%;
 	color: #444;
 }
-
 .room:after {
 	position: absolute;
 	content: '';
-  opacity: 0;
+	opacity: 0;
 	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	opacity: 1;
-  transition: opacity 0.25s ease-out;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  outline: 1px solid #888;
+	transition: opacity 0.35s ease-in;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	outline: 2px solid #555;
 }
-.room:active:after,
-.room.selected:after,
 .room:global(.teleporter-active):after {
-  transition: opacity 0.2s ease-out;
-  opacity: 0;
+	opacity: 0;
+	transition: none;
 }
-
+.room:global(.teleporter-idle).selected:after {
+	opacity: 0;
+	transition: none;
+}
+.room:global(.teleporter-active).selected:after {
+	opacity: 0;
+	transition: opacity 0.35s ease-in;
+}
+.segment {
+	height: 40px;
+	width: 120%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: black;
+	transform-origin: 0 0;
+	transition: width 0.2s ease-in;
+	box-shadow: 0 5px 150px rgba(0,0,0,0.3);
+}
+.segment:after {
+	content: '';
+	width: 25vh;
+	height: 25vh;
+	background: black;
+	position: absolute;
+	right: -5%;
+	top: -280%;
+	border-radius: 50%;
+}
+.room:global(.teleporter-active) .segment {
+	width: 0%;
+	transition: none;
+}
+.room:global(.teleporter-idle).selected .segment {
+	width: 0%;
+	transition: none;
+}
+.room:global(.teleporter-active).selected .segment {
+	width: 0%;
+	transition: width 0.2s ease-in;
+}
 .content {
 	position: absolute;
 	top: 0;
@@ -35,6 +72,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0 0 0px 0 rgba(0,0,0,0.4);
+	overflow: hidden;
 }
 .expanded {
 	left: 1.25% !important;
@@ -57,11 +95,31 @@
 }
 .contract {
 	display: none;
-	height: 10%;
-	width: 10%;
-	background: green;
+	height: 8%;
+	width: 5.5%;
+	line-height: 160%;
+	font-size: 1.2em;
+	background: rgba(255,255,255,0.85);
 }
-:global(.teleporter-active) {
+.contract:before,
+.contract:after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	height: 100%;
+	width: 4%;
+	background: #444;
+	transform-origin: 50% 50%;
+}
+.contract:before {
+	top: 0;
+	transform: rotate(45deg);
+}
+.contract:after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+.room:global(.teleporter-active) {
 	z-index: 9
 }
 .room.selected {
@@ -76,20 +134,4 @@
 .room.selected .contract {
 	display: block;
 	text-align: center;
-}
-
-.text {
-	line-height: 130%;
-	font-size: 1.1vw;
-  font-family: 'din-regular';
-	position: absolute;
-	background: rgba(255,255,255,0.8);
-	width: 33%;
-	top: 10%;
-	bottom: 10%;
-	right: 0;
-	padding: 2%;
-}
-h1 {
-	margin: 0
 }

@@ -1,47 +1,97 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Room from './Room';
+import LangSelector from './LangSelector';
 import AppCss from './css/App.css';
 
-import lingerieFr from './content/lingerie/lingerie_fr.md';
-import argenterieFr from './content/argenterie/argenterie_fr.md';
+import content from './content/content';
 
-export default class App extends React.Component {
+// exported so we can write tests
+// see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components
+export class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {
-			selectedRoom: ''
-		}
-	}
-	roomSelection(roomName) {
-		this.setState({selectedRoom: roomName});
 	}
 	render() {
-		let rooms = {
-			selectedRoom: this.state.selectedRoom,
-			roomSelection: this.roomSelection.bind(this)
-		}
 		return (
 			<div
 				className={AppCss.app}>
+				<LangSelector />
 				<Room
-					rooms={rooms}
+					room={{
+						name: 'argenterie',
+						top: 55,
+						left: 23,
+						content: content.argenterie,
+						segment: 38
+					}}>
+				</Room>
+				<Room
+					room={{
+						name: 'chambre',
+						top: 26,
+						left: 50,
+						content: content.chambre,
+						segment: 80
+					}}>
+				</Room>
+				<Room
+					room={{
+						name: 'grande_cuisine',
+						top: 78,
+						left: 18,
+						content: content.grande_cuisine,
+						segment: -45
+					}}>
+				</Room>
+				<Room
 					room={{
 						name: 'lingerie',
 						top: 29,
 						left: 15,
-						content: lingerieFr
+						content: content.lingerie,
+						segment: 38
 					}}>
 				</Room>
 				<Room
-					rooms={rooms}
 					room={{
-						name: 'argenterie',
-						top: 56,
-						left: 24,
-						content: argenterieFr
+						name: 'salle_a_manger',
+						top: 80,
+						left: 52,
+						content: content.salle_a_manger,
+						segment: -120
+					}}>
+				</Room>
+				<Room
+					room={{
+						name: 'salle_de_bain',
+						top: 26,
+						left: 34,
+						content: content.salle_de_bain,
+						segment: 120
+					}}>
+				</Room>
+				<Room
+					room={{
+						name: 'salle_de_reunion',
+						top: 80,
+						left: 90,
+						content: content.salle_de_reunion,
+						segment: -130
+					}}>
+				</Room>
+				<Room
+					room={{
+						name: 'salle_des_fermiers',
+						top: 83,
+						left: 8,
+						content: content.salle_des_fermiers,
+						segment: -90
 					}}>
 				</Room>
 			</div>
 		);
 	}
-}
+};
+
+export default connect((state) => { return state; })(App);
