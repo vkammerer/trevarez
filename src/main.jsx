@@ -11,18 +11,23 @@ let store = createStore(reducers);
 
 // wrap the top level component inside the react-redux Provider
 let rootElement = document.querySelector('.root');
-render(
-	<Provider store={store}>
-		<App />
-	</Provider>,
-	rootElement
-);
+const renderApp = () => {
+	render(
+		<Provider store={store}>
+			<App />
+		</Provider>,
+		rootElement
+	);
+}
+
+renderApp();
 
 // Teleporter doesnt rerender components on page resize for now
 // so we do it manually here for now.
 let reloadTimer;
 const reload = () => {
-	document.location.reload(false);
+	React.unmountComponentAtNode(rootElement)
+	renderApp();
 }
 
 window.addEventListener('resize', () => {
