@@ -23,6 +23,6 @@ describe('Room', () => {
 		result.props.id.should.equal(props.name);
 		result.props.style.top.should.equal(props.top + '%');
 		result.props.style.left.should.equal(props.left + '%');
-		result.props.children.length.should.equal(3);
+		result.props.children.length.should.equal(2);
 	});
 });

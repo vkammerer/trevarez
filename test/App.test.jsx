@@ -14,6 +14,6 @@ describe('App', () => {
 		// root object of component should be a div
 		result.type.should.equal('div');
 		// App component should have 1 LangSelector and 8 Room children
-		result.props.children.length.should.equal(9);
+		result.props.children.length.should.equal(8);
 	});
 });
