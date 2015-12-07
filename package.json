@@ -1,6 +1,6 @@
 {
   "name": "trevarez",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Borne tactile pour l'exposition permanente \"Bâtir un rêve\" au château de Trévarez.",
   "scripts": {
     "clean": "rimraf release",
