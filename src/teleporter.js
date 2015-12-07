@@ -17,8 +17,8 @@ class TrevarezTeleporter extends Teleporter {
 	animate(index) {
 		let animation = Object.assign({}, this.animation, this.teleportation.steps[index + 1].animation);
 		let theseSteps = [
-		  { transform: transforms(this.teleportation.steps[index].rect, this.teleportation.sizeRect) },
-		  { transform: transforms(this.teleportation.steps[index + 1].rect, this.teleportation.sizeRect) }
+			{ transform: transforms(this.teleportation.steps[index].rect, this.teleportation.sizeRect) },
+			{ transform: transforms(this.teleportation.steps[index + 1].rect, this.teleportation.sizeRect) }
 		];
 		if (
 			(typeof this.teleportation.steps[index].opacity === 'number') &&
@@ -31,9 +31,9 @@ class TrevarezTeleporter extends Teleporter {
 			this.innerElement.style.transform = transforms(this.teleportation.steps[index + 1].rect, this.teleportation.sizeRect);
 		}
 		this.teleportation.player = this.innerElement.animate(theseSteps, {
-		  duration: animation.duration,
-		  delay: animation.delay,
-		  easing: animation.easing
+			duration: animation.duration,
+			delay: animation.delay,
+			easing: animation.easing
 		});
 		let timeoutDelay = animation.delay ? animation.duration + animation.delay : animation.duration;
 		setTimeout(() => {
