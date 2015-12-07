@@ -36,7 +36,6 @@
 	background: black;
 	transform-origin: 0 0;
 	transition: width 0.2s ease-in;
-	box-shadow: 0 5px 150px rgba(0,0,0,0.3);
 }
 .segment:after {
 	content: '';

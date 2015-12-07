@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import Teleporter from 'teleporter';
+import Teleporter from '../../teleporter';
 import { selectLang, selectRoom, Lang } from '../../store/actions';
 import Text from '../Text/Text';
 import LangSelector from '../LangSelector/LangSelector';
@@ -84,7 +84,6 @@ export class Room extends React.Component {
 					style={this.imageStyle}>
 					<div
 						className={RoomCss.expand}>
-						Expand
 					</div>
 					<div
 						onClick={this.contract}
