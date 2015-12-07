@@ -3,8 +3,8 @@ import { render } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import globalCss from './css/global';
-import App from './App';
-import reducers from './reducers';
+import App from './components/App/App';
+import reducers from './store/reducers';
 
 // create redux store from the reducer
 let store = createStore(reducers);
@@ -26,8 +26,8 @@ const reload = () => {
 }
 
 window.addEventListener('resize', () => {
-  clearTimeout(reloadTimer);
-  reloadTimer = setTimeout(reload, 100);
+	clearTimeout(reloadTimer);
+	reloadTimer = setTimeout(reload, 100);
 });
 
 // Development hot reloading

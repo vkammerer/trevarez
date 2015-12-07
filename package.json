@@ -18,10 +18,10 @@
     "build:osx": "npm run clean:osx && npm run app:osx && npm run installer:osx",
     "build:win": "npm run clean:win && npm run app:win && npm run installer:win",
     "deploy": "git subtree push --prefix static origin gh-pages",
-    "test": "mocha test/**/*.test.js* -R spec --compilers css:./test/misc/null-compiler,md:./test/misc/null-compiler,jsx:babel-core/register --recursive",
-    "coverage": "istanbul cover --dir ./reports _mocha -- -R spec test/**/*.test.js* --compilers css:./test/misc/null-compiler,md:./test/misc/null-compiler,jsx:babel-core/register --recursive",
+    "test": "mocha 'src/**/__test__/*.test.js*' -R spec --compilers jsx:babel-core/register,css:./misc/null-compiler,md:./misc/null-compiler --recursive",
+    "coverage": "istanbul cover --dir ./reports _mocha -- 'src/**/__test__/*.test.js*' -R spec --compilers jsx:babel-core/register,css:./misc/null-compiler,md:./misc/null-compiler --recursive",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=b02ea30e27e20150c80e3e084f8b02bea77bb7fa0cbeaf8e73dbccd54a31085b codeclimate-test-reporter < reports/lcov.info",
-    "ci": "npm run clean && npm run coverage && npm run codeclimate && npm run build:win"
+    "ci": "npm run clean && npm run coverage && npm run codeclimate && npm run build && npm run build:win"
   },
   "repository": {
     "type": "git",

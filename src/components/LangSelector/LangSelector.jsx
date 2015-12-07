@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
-import { selectLang, Lang } from './actions';
-import LangCss from './css/Lang.css';
+import { selectLang, Lang } from '../../store/actions';
+import LangCss from './LangSelector.css';
 
 // exported so we can write tests
 // see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components

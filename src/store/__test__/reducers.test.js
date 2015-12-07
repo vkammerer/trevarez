@@ -1,7 +1,7 @@
 import { should } from 'chai';
 import { createStore } from 'redux';
-import reducers from '../src/reducers';
-import { selectLang, selectRoom, Lang } from '../src/actions';
+import reducers from '../reducers';
+import { selectLang, selectRoom, Lang } from '../actions';
 
 
 should();

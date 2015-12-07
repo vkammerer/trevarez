@@ -1,19 +1,18 @@
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import { should } from 'chai';
-import { App } from '../src/App';
+import { LangSelector } from '../LangSelector';
 
 should();
 
-describe('App', () => {
+describe('LangSelector', () => {
 
 	it('should render ok', () => {
 		let renderer = TestUtils.createRenderer();
-		renderer.render(<App />);
+		renderer.render(<LangSelector />);
 		let result = renderer.getRenderOutput();
 		// root object of component should be a div
 		result.type.should.equal('div');
-		// App component should have 1 LangSelector and 8 Room children
-		result.props.children.length.should.equal(8);
+		result.props.children.length.should.equal(5);
 	});
 });

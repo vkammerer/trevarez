@@ -2,11 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import Teleporter from 'teleporter';
-import { selectLang, selectRoom, Lang } from './actions';
-import Text from './Text';
-import LangSelector from './LangSelector';
-import RoomCss from './css/Room.css';
-import TextCss from './css/Text.css';
+import { selectLang, selectRoom, Lang } from '../../store/actions';
+import Text from '../Text/Text';
+import LangSelector from '../LangSelector/LangSelector';
+import RoomCss from './Room.css';
 
 // exported so we can write tests
 // see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components

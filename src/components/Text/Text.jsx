@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import { selectLang, selectRoom, Lang } from './actions';
-import TextCss from './css/Text.css';
+import { selectLang, selectRoom, Lang } from '../../store/actions';
+import TextCss from './Text.css';
 
-class Text extends React.Component {
+export class Text extends React.Component {
 	constructor(props) {
 		super(props);
 	}

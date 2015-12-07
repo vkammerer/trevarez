@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Room from './Room';
-import LangSelector from './LangSelector';
-import AppCss from './css/App.css';
+import Room from '../Room/Room';
+import LangSelector from '../LangSelector/LangSelector';
+import AppCss from './App.css';
 
-import content from './content/content';
+import content from '../../content/content';
 
 // exported so we can write tests
 // see: https://github.com/rackt/redux/blob/master/docs/recipes/WritingTests.md#connected-components
