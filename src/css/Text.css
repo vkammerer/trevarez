@@ -12,16 +12,15 @@ h1 {
 	font-family: 'din-regular';
 	position: absolute;
 	width: 33%;
-	top: 20%;
-	bottom: 0;
+	top: 16%;
 	right: 0;
 	transition: opacity 0.2s ease-out;
 	overflow: hidden;
+	background: rgba(255,255,255,0.85);
 }
 .text .textFr,
 .text .textEn,
 .text .textBz {
-	background: rgba(255,255,255,0.85);
 	display: none;
 	padding: 6%;
 }
@@ -39,7 +38,7 @@ h1 {
 	display: inline-block;
 	width: 33%;
   padding: 3% 6%;
-	background: rgba(240,240,240,0.85);
+	background: rgba(0,0,0,0.05);
 	text-align: center;
 	z-index: 11;
 	position: relative;
@@ -47,7 +46,7 @@ h1 {
 .text.langFr .langOptionFr,
 .text.langEn .langOptionEn,
 .text.langBz .langOptionBz {
-	background: rgba(255,255,255,0.85);
+	background: transparent;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 	z-index: 12
 }

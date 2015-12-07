@@ -29,7 +29,7 @@ export class Room extends React.Component {
 		}
 		return false;
 	}
-	componentDidMount() {
+	setTeleporter() {
 		this.teleporter = new Teleporter({
 			selector: `#${this.refs.roomRoot.id}`,
 			sizeClass: RoomCss.expanded,
@@ -38,6 +38,10 @@ export class Room extends React.Component {
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
 		});
+
+	}
+	componentDidMount() {
+		this.setTeleporter();
 	}
 	componentDidUpdate(prevProps) {
 		if (

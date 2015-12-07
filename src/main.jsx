@@ -18,6 +18,19 @@ render(
 	rootElement
 );
 
+// Teleporter doesnt rerender components on page resize for now
+// so we do it manually here for now.
+let reloadTimer;
+const reload = () => {
+	document.location.reload(false);
+}
+
+window.addEventListener('resize', () => {
+  clearTimeout(reloadTimer);
+  reloadTimer = setTimeout(reload, 100);
+});
+
+// Development hot reloading
 if (module.hot) {
 	module.hot.accept();
 }
