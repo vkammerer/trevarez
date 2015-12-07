@@ -10,7 +10,7 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-	mainWindow = new BrowserWindow({ fullscreen: true });
+	var mainWindow = new BrowserWindow({ fullscreen: true });
 	mainWindow.loadURL('file://' + __dirname + '/index.html');
 
 	if (process.platform === 'darwin') {
