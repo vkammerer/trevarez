@@ -16,6 +16,9 @@ export class App extends React.Component {
 		return (
 			<div
 				className={AppCss.app}>
+				<div
+					className={AppCss.hand}>
+				</div>
 				<Room
 					room={{
 						name: 'argenterie',

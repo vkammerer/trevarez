@@ -11,3 +11,13 @@
 	display: block;
 	padding-top: 62.50%;
 }
+.hand {
+	background: url('../../../static/img/hand_icon.svg') center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	right: 5%;
+	top: 10%;
+	height: 12%;
+	width: 10%;
+}

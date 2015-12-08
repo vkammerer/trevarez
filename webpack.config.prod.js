@@ -42,7 +42,7 @@ module.exports = {
 				loader: 'file-loader?name=[name].[ext]'
 			},
 			{
-				test: /\.png|\.jpg$/,
+				test: /\.png|\.jpg|\.svg$/,
 				loader: 'file-loader?name=img/[name].[ext]'
 			},
 			{
