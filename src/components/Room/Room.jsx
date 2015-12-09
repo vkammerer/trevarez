@@ -2,7 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import Teleporter from '../../teleporter';
-import { selectLang, selectRoom, Lang } from '../../store/actions';
+import {
+	selectLang,
+	selectRoom,
+	displayText,
+	Lang
+} from '../../store/actions';
 import Text from '../Text/Text';
 import LangSelector from '../LangSelector/LangSelector';
 import RoomCss from './Room.css';
@@ -50,16 +55,25 @@ export class Room extends React.Component {
 				(this.props.selectedRoom === this.props.room.name)
 			)
 		) {
-			let steps = this.props.selectedRoom === this.props.room.name ?
-				['', {
+			if (this.props.selectedRoom === this.props.room.name) {
+				this.teleporter.teleport(['', {
 					class: RoomCss.expanded,
 					animation: {
 						duration: 600,
 						easing: 'cubic-bezier(0,0,0.32,1)',
 						delay: 400
 					}
-				}] : [RoomCss.expanded, ''];
-			this.teleporter.teleport(steps);
+				}]).then(()=>{
+					setTimeout(()=>{
+						this.props.dispatch(displayText(true));
+					}, 1000)
+				});
+			}
+			else {
+				this.teleporter.teleport([RoomCss.expanded, '']).then(()=>{
+					this.props.dispatch(displayText(false));
+				});
+			}
 		}
 	}
 	render() {

@@ -1,6 +1,7 @@
 // action types
 export const SELECTED_LANG = 'SELECTED_LANG';
 export const SELECTED_ROOM = 'SELECTED_ROOM';
+export const DISPLAYED_TEXT = 'DISPLAYED_TEXT';
 
 // lang constants
 export const Lang = {
@@ -16,4 +17,8 @@ export function selectLang(lang) {
 
 export function selectRoom(room) {
 	return { type: SELECTED_ROOM, room }
+};
+
+export function displayText(isDisplayed) {
+	return { type: DISPLAYED_TEXT, isDisplayed }
 };

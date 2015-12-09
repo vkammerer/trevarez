@@ -17,6 +17,13 @@ h1 {
 	transition: opacity 0.2s ease-out;
 	overflow: hidden;
 	background: rgba(255,255,255,0.85);
+	transform: translateX(90%);
+	transition: transform 0.2s ease-out;
+	transition-delay: 1s;
+}
+.text.displayed {
+	transform: translateX(0%);
+	transition-delay: 0s;
 }
 .text .textFr,
 .text .textEn,
