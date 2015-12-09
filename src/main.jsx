@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { render, unmountComponentAtNode } from 'react-dom';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import globalCss from './css/global';
@@ -26,7 +26,7 @@ renderApp();
 // so we do it manually here for now.
 let reloadTimer;
 const reload = () => {
-	React.unmountComponentAtNode(rootElement)
+	unmountComponentAtNode(rootElement)
 	renderApp();
 }
 

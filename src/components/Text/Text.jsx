@@ -1,12 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import { selectLang, selectRoom, Lang } from '../../store/actions';
+import {
+	selectLang,
+	selectRoom,
+	displayText,
+	Lang
+} from '../../store/actions';
 import TextCss from './Text.css';
 
 export class Text extends React.Component {
 	constructor(props) {
 		super(props);
+		this.toogle = this.toogle.bind(this);
 	}
 	insertContent(lang) {
 		return {__html: this.props.room.content[this.props.selectedLang]};
@@ -14,15 +20,20 @@ export class Text extends React.Component {
 	setLang(lang) {
 		this.props.dispatch(selectLang(lang));
 	}
+	toogle(){
+		this.props.dispatch(displayText(! this.props.displayedText));
+	}
 	render() {
 		let textClass = classNames({
 			[TextCss.text]: true,
+			[TextCss.displayed]: this.props.displayedText && (this.props.selectedRoom === this.props.room.name),
 			[TextCss.langFr]: this.props.selectedLang === Lang.FR,
 			[TextCss.langEn]: this.props.selectedLang === Lang.EN,
 			[TextCss.langBz]: this.props.selectedLang === Lang.BZ
 		});
 		return (
 			<div className={textClass}>
+				<div onClick={this.toogle}>Toggle</div>
 				<div
 					className={TextCss.lang}>
 					<a
