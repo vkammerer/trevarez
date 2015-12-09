@@ -1,7 +1,7 @@
 .app {
 	position: relative;
 	max-width: 160vh;
-	background: url('../../../static/img/chateau.png') center center;
+	background: url('../../../static/img/chateau.svg') center center;
 	background-size: contain;
 	margin: auto;
 }

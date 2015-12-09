@@ -37,7 +37,7 @@ h1 {
 .lang > a {
 	display: inline-block;
 	width: 33%;
-  padding: 3% 6%;
+	padding: 3% 6%;
 	background: rgba(0,0,0,0.05);
 	text-align: center;
 	z-index: 11;
