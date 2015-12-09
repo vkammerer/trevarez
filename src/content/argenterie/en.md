@@ -1,6 +1,6 @@
 # The silverware room
 
-This room was the preserve of the maitre d'or the butler who was responsible for the silverware.
+This room was the preserve of the maitre d'hotel or the butler who was responsible for the silverware.
 
 Protected by a reinforced door, the room was furnished with cupboards lined with red fabric, specially designed for holding valuable dishes and cutlery.
 
