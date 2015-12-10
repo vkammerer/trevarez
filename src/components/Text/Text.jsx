@@ -33,7 +33,9 @@ export class Text extends React.Component {
 		});
 		return (
 			<div className={textClass}>
-				<div onClick={this.toogle}>Toggle</div>
+				<div
+					className={TextCss.toggle}
+					onClick={this.toogle}></div>
 				<div
 					className={TextCss.lang}>
 					<a

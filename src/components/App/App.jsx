@@ -23,10 +23,10 @@ export class App extends React.Component {
 				<Room
 					room={{
 						name: 'argenterie',
-						top: 55,
+						top: 53,
 						left: 23,
 						content: content.argenterie,
-						segment: 38
+						segment: 30
 					}}>
 				</Room>
 				<Room
