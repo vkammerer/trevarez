@@ -20,6 +20,6 @@ describe('Text', () => {
 		let result = renderer.getRenderOutput();
 		// root object of component should be a div
 		result.type.should.equal('div');
-		result.props.children.length.should.equal(4);
+		result.props.children.length.should.equal(5);
 	});
 });

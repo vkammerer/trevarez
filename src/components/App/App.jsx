@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Isvg from 'react-inlinesvg';
 import Room from '../Room/Room';
 import LangSelector from '../LangSelector/LangSelector';
 import AppCss from './App.css';
-
 import content from '../../content/content';
 
 // exported so we can write tests
@@ -16,6 +16,7 @@ export class App extends React.Component {
 		return (
 			<div
 				className={AppCss.app}>
+				<Isvg src="img/roomsLayer.svg" className={AppCss.roomsLayer} uniquifyIDs={false}></Isvg>
 				<div
 					className={AppCss.hand}>
 				</div>
