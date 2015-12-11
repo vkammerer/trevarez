@@ -2,6 +2,7 @@
 export const SELECTED_LANG = 'SELECTED_LANG';
 export const SELECTED_ROOM = 'SELECTED_ROOM';
 export const DISPLAYED_TEXT = 'DISPLAYED_TEXT';
+export const DELAYED_TIMER = 'DELAYED_TIMER';
 
 // lang constants
 export const Lang = {
@@ -21,4 +22,11 @@ export function selectRoom(room) {
 
 export function displayText(isDisplayed) {
 	return { type: DISPLAYED_TEXT, isDisplayed }
+};
+
+export function delayTimer() {
+	return {
+		type: DELAYED_TIMER,
+		timestamp: Date.now()
+	}
 };

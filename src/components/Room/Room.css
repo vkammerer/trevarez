@@ -47,13 +47,17 @@
 	top: -280%;
 	border-radius: 50%;
 }
-.room:global(.teleporter-active) .segment {
-	width: 0%;
-	transition: none;
-}
+.room:global(.teleporter-active) .segment,
 .room:global(.teleporter-idle).selected .segment {
 	width: 0%;
 	transition: none;
+}
+.room:global(.teleporter-active) .segment:after,
+.room:global(.teleporter-idle).selected .segment:after {
+	width: 0;
+}
+.room:global(.teleporter-active).selected .segment:after {
+	width: 32vh;
 }
 .room:global(.teleporter-active).selected .segment {
 	width: 0%;

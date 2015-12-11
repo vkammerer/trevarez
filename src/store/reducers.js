@@ -3,6 +3,7 @@ import {
 	SELECTED_LANG,
 	SELECTED_ROOM,
 	DISPLAYED_TEXT,
+	DELAYED_TIMER,
 	Lang
 } from './actions';
 
@@ -32,7 +33,6 @@ function selectedRoom(state = '', action) {
 	}
 }
 
-// reducer dedicated to room selection
 function displayedText(state = false, action) {
 	switch (action.type) {
 		case DISPLAYED_TEXT:
@@ -42,10 +42,20 @@ function displayedText(state = false, action) {
 	}
 }
 
+function delayedTimer(state = false, action) {
+	switch (action.type) {
+		case DELAYED_TIMER:
+			return action.timestamp;
+		default:
+			return state;
+	}
+}
+
 const reducers = combineReducers({
 	selectedLang,
 	selectedRoom,
-	displayedText
+	displayedText,
+	delayedTimer
 });
 
 export default reducers;

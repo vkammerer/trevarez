@@ -6,9 +6,11 @@ import {
 	selectLang,
 	selectRoom,
 	displayText,
+	delayTimer,
 	Lang
 } from '../../store/actions';
 import Text from '../Text/Text';
+import Timer from '../Timer/Timer';
 import LangSelector from '../LangSelector/LangSelector';
 import RoomCss from './Room.css';
 
@@ -25,6 +27,9 @@ export class Room extends React.Component {
 	expand(){
 		if (this.props.selectedRoom !== this.props.room.name) {
 			this.props.dispatch(selectRoom(this.props.room.name));
+		}
+		else {
+			this.props.dispatch(delayTimer());
 		}
 	}
 	contract(){
@@ -105,6 +110,8 @@ export class Room extends React.Component {
 					</div>
 					<Text room={this.props.room}>
 					</Text>
+					<Timer room={this.props.room}>
+					</Timer>
 				</div>
 			</div>
 		);

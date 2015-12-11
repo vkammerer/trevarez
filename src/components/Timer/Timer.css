@@ -1,0 +1,49 @@
+.question {
+	display: none;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.8);
+	z-index: 1;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.question.displayed {
+	display: flex;
+}
+
+.question .textFr,
+.question .textEn,
+.question .textBz {
+	position: relative;
+	display: none;
+	margin-top: -6vh;
+	max-width: 50%;
+}
+.question.langFr .textFr,
+.question.langEn .textEn,
+.question.langBz .textBz {
+	display: block;
+}
+
+.question h2 {
+	line-height: 100%;
+}
+
+.button {
+	position: relative;
+	border: 2px solid green;
+	border-radius: 1vh;
+	width: 50%;
+	line-height: 140%;
+	padding: 0.6em 0 0;
+	color: white;
+	margin: 0 auto;
+	color: green;
+	font-weight: bold;
+	font-size: 1.4em;
+	background: #CEE8CE;
+}
