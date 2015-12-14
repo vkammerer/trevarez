@@ -1,34 +1,32 @@
-:global(.slick-track) {
+.slide {
+	width: 100%;
 	height: 100%;
+	background-position: center center;
+	background-size: cover;
 }
 
-:global(.slick-slide) {
-	max-height: 100%;
-}
-
-:global(.slick-next),
-:global(.slick-prev) {
+.prevArrow,
+.nextArrow {
 	border-radius: 100%;
 	display: inline-block;
 	cursor: pointer;
-	padding: 2.5%;
-	top: 90%;
+	padding: 3.5%;
+	top: 84%;
 	position: absolute;
 	font-size: 0;
 	line-height: 0;
 	background: rgba(255,255,255,0.85);
-	border: none;
+	z-index: 10;
+}
+.prevArrow {
+	left: 40%;
+}
+.nextArrow {
+	right: 40%;
 }
 
-:global(.slick-prev) {
-	left: 45%;
-}
-:global(.slick-next) {
-	left: 55%;
-}
-
-:global(.slick-prev:after),
-:global(.slick-next:after) {
+.prevArrow:after,
+.nextArrow:after {
 	position: absolute;
 	content: '';
 	margin-top: -1vh;
@@ -41,9 +39,9 @@
 	border-bottom: 1vh solid transparent;
 	border-right: 1vh solid #555;
 }
-
-:global(.slick-next:after) {
-	left: 40%;
+.nextArrow:after {
+	left: auto;
+	right: 40%;
 	border-right: none;
 	border-left: 1vh solid #555;
 }

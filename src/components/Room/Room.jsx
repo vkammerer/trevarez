@@ -9,6 +9,7 @@ import {
 	delayTimer,
 	Lang
 } from '../../store/actions';
+import Slideshow from '../Slideshow/Slideshow';
 import Text from '../Text/Text';
 import Timer from '../Timer/Timer';
 import LangSelector from '../LangSelector/LangSelector';
@@ -21,7 +22,6 @@ export class Room extends React.Component {
 		super(props);
 		this.expand = this.expand.bind(this);
 		this.contract = this.contract.bind(this);
-		this.imageStyle = {backgroundImage: `url(img/${this.props.room.name}.jpg)`};
 		this.segmentStyle = {transform: `rotate(${this.props.room.segment}deg)`};
 	}
 	expand(){
@@ -47,10 +47,20 @@ export class Room extends React.Component {
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
 		});
-
+	}
+	fixChromeTransform() {
+		let el = document.querySelector(`#${this.refs.roomRoot.id} > .teleporter-container`);
+		let me = el.style.transform;
+		el.style.transform = null;
+		el.style.opacity = 0.01;
+		setTimeout(()=>{
+			el.style.transform = me;
+			el.style.opacity = 1;
+		}, 1000)
 	}
 	componentDidMount() {
 		this.setTeleporter();
+		this.fixChromeTransform();
 	}
 	componentDidUpdate(prevProps) {
 		if (
@@ -99,8 +109,7 @@ export class Room extends React.Component {
 				<div className={RoomCss.segment}
 					style={this.segmentStyle}></div>
 				<div
-					className={RoomCss.content}
-					style={this.imageStyle}>
+					className={RoomCss.content}>
 					<div
 						className={RoomCss.expand}>
 					</div>
@@ -108,6 +117,8 @@ export class Room extends React.Component {
 						onClick={this.contract}
 						className={RoomCss.contract}>
 					</div>
+					<Slideshow room={this.props.room}>
+					</Slideshow>
 					<Text room={this.props.room}>
 					</Text>
 					<Timer room={this.props.room}>

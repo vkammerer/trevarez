@@ -19,12 +19,12 @@ export class Timer extends React.Component {
 		this.questionTimer = setTimeout(()=>{
 			this.setState({displayQuestion: true});
 			this.delayClose();
-		}, 5000);
+		}, 60000);
 	}
 	delayClose() {
 		this.closeTimer = setTimeout(()=>{
 			this.props.dispatch(selectRoom(''));
-		}, 5000);
+		}, 8000);
 	}
 	resetTimer() {
 		clearTimeout(this.questionTimer);
