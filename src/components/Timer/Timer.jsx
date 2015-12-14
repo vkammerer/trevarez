@@ -11,9 +11,7 @@ export class Timer extends React.Component {
 		this.delayClose = this.delayClose.bind(this);
 		this.resetTimer = this.resetTimer.bind(this);
 		this.dispatchDelayTimer = this.dispatchDelayTimer.bind(this);
-	}
-	componentWillMount() {
-		this.setState({displayQuestion: false});
+		this.state = { displayQuestion: false };
 	}
 	delayQuestion() {
 		this.questionTimer = setTimeout(()=>{
