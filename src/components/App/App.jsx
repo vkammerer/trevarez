@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Isvg from 'react-inlinesvg';
 import Room from '../Room/Room';
 import LangSelector from '../LangSelector/LangSelector';
+import Title from '../Title/Title';
 import AppCss from './App.css';
 import content from '../../content/content';
 
@@ -17,9 +18,7 @@ export class App extends React.Component {
 			<div
 				className={AppCss.app}>
 				<Isvg src="img/roomsLayer.svg" className={AppCss.roomsLayer} uniquifyIDs={false}></Isvg>
-				<div
-					className={AppCss.hand}>
-				</div>
+				<Title />
 				<Room
 					room={{
 						name: 'argenterie',

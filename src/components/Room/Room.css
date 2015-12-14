@@ -33,7 +33,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	background: black;
+	background: #444;
 	transform-origin: 0 0;
 	transition: width 0.2s ease-in;
 }
@@ -41,7 +41,7 @@
 	content: '';
 	width: 32vh;
 	height: 32vh;
-	background: black;
+	background: #444;
 	position: absolute;
 	right: -5%;
 	top: -280%;

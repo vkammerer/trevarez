@@ -1,0 +1,19 @@
+.title {
+	position: absolute;
+	width: 100%;
+	top: 3%;
+	color: #444;
+}
+
+.title h1 {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	margin-top: 0;
+	transition: opacity 1s ease-in;
+}
+
+.title .active {
+	opacity: 1;
+}
