@@ -19,23 +19,25 @@ export class Slideshow extends React.Component {
 			let bgStyle = {
 				backgroundImage : `url('img/${this.props.room.name}/${image}.jpg')`
 			};
-			return <div
-				key={index}
-				className={SlideshowCss.slide}
-				style={bgStyle}>
-			</div>;
-		})
+			return (
+				<div
+					key={index}
+					className={SlideshowCss.slide}
+					style={bgStyle} />
+			);
+		});
 		return (
-      <Slider infinite swipe draggable >
-        <PrevArrow
-        	activeClassName={SlideshowCss.prevArrow}
-        	inactiveClassName={SlideshowCss.prevArrow} />
-        <Slides {...this.props}  >
-	        {images}
-        </Slides>
-        <NextArrow activeClassName={SlideshowCss.nextArrow}
-        	inactiveClassName={SlideshowCss.nextArrow} />
-      </Slider>
+			<Slider infinite swipe draggable >
+				<PrevArrow
+					activeClassName={SlideshowCss.prevArrow}
+					inactiveClassName={SlideshowCss.prevArrow} />
+				<Slides {...this.props}  >
+					{images}
+				</Slides>
+				<NextArrow
+					activeClassName={SlideshowCss.nextArrow}
+					inactiveClassName={SlideshowCss.nextArrow} />
+			</Slider>
 		);
 	}
 }

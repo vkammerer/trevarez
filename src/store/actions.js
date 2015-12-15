@@ -13,20 +13,20 @@ export const Lang = {
 
 // action creators
 export function selectLang(lang) {
-	return { type: SELECTED_LANG, lang }
+	return { type: SELECTED_LANG, lang };
 };
 
 export function selectRoom(room) {
-	return { type: SELECTED_ROOM, room }
+	return { type: SELECTED_ROOM, room };
 };
 
 export function displayText(isDisplayed) {
-	return { type: DISPLAYED_TEXT, isDisplayed }
+	return { type: DISPLAYED_TEXT, isDisplayed };
 };
 
 export function delayTimer() {
 	return {
 		type: DELAYED_TIMER,
 		timestamp: Date.now()
-	}
+	};
 };
