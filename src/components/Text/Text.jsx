@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import {
 	selectLang,
-	selectRoom,
 	displayText,
 	Lang
 } from '../../store/actions';
@@ -14,7 +13,7 @@ export class Text extends React.Component {
 		super(props);
 		this.toogle = this.toogle.bind(this);
 	}
-	insertContent(lang) {
+	insertContent() {
 		return {__html: this.props.room.content[this.props.selectedLang]};
 	}
 	setLang(lang) {
@@ -55,20 +54,20 @@ export class Text extends React.Component {
 						</a>
 				</div>
 				<div
-					dangerouslySetInnerHTML={this.insertContent('fr')}
+					dangerouslySetInnerHTML={this.insertContent()}
 					className={TextCss.textFr}>
 				</div>
 				<div
-					dangerouslySetInnerHTML={this.insertContent('en')}
+					dangerouslySetInnerHTML={this.insertContent()}
 					className={TextCss.textEn}>
 				</div>
 				<div
-					dangerouslySetInnerHTML={this.insertContent('bz')}
+					dangerouslySetInnerHTML={this.insertContent()}
 					className={TextCss.textBz}>
 				</div>
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(Text);

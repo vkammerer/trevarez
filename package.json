@@ -7,6 +7,7 @@
     "clean:osx": "rimraf release/osx",
     "clean:win": "rimraf release/win",
     "clean:linux": "rimraf release/linux",
+    "lint": "eslint src --ext js,jsx",
     "start": "electron static",
     "app:osx": "electron-packager static Trevarez --platform=darwin --arch=x64 --out=release/osx --version=0.36.0 --overwrite",
     "app:win": "electron-packager static Trevarez --platform=win32 --arch=ia32 --out=release/win --version=0.36.0 --overwrite",
@@ -21,7 +22,7 @@
     "test": "mocha 'src/**/__test__/*.test.js*' -R spec --compilers jsx:babel-core/register,css:./misc/null-compiler,md:./misc/null-compiler --recursive",
     "coverage": "istanbul cover --dir ./reports _mocha -- 'src/**/__test__/*.test.js*' -R spec --compilers jsx:babel-core/register,css:./misc/null-compiler,md:./misc/null-compiler --recursive",
     "codeclimate": "CODECLIMATE_REPO_TOKEN=b02ea30e27e20150c80e3e084f8b02bea77bb7fa0cbeaf8e73dbccd54a31085b codeclimate-test-reporter < reports/lcov.info",
-    "ci": "npm run clean && npm run coverage && npm run codeclimate && npm run build && npm run build:win"
+    "ci": "npm run clean && npm run lint && npm run coverage && npm run codeclimate && npm run build && npm run build:win"
   },
   "repository": {
     "type": "git",
@@ -40,6 +41,9 @@
     "electron-builder": "^2.2.0",
     "electron-packager": "^5.1.1",
     "electron-prebuilt": "^0.36.0",
+    "eslint": "^1.10.3",
+    "eslint-loader": "^1.1.1",
+    "eslint-plugin-react": "^3.11.3",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.9.1",
     "file-loader": "^0.8.5",

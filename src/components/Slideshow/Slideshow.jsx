@@ -1,13 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import classNames from 'classnames';
 import SlideshowCss from './Slideshow.css';
 import {
 	Slider,
 	Slides,
 	PrevArrow,
-	NextArrow,
-	Dots
+	NextArrow
 } from 'react-flex-slick';
 
 export class Slideshow extends React.Component {

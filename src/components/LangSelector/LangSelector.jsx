@@ -29,6 +29,6 @@ export class LangSelector extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(LangSelector);

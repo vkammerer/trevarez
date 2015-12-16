@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Isvg from 'react-inlinesvg';
 import Room from '../Room/Room';
-import LangSelector from '../LangSelector/LangSelector';
 import Title from '../Title/Title';
 import AppCss from './App.css';
 import content from '../../content/content';
@@ -140,6 +139,6 @@ export class App extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(App);

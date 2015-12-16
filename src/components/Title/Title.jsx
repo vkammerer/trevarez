@@ -11,11 +11,11 @@ export class Title extends React.Component {
 	componentDidMount() {
 		setInterval(() => {
 			let i = ++this.state.index % 3;
-			this.setState({index: i});
+			this.setState({ index: i });
 		}, 5000);
 	}
 	render() {
-		let titleFrClass, titleEnClass, titleBzClass = classNames({ [TitleCss.active] : false });;
+		let titleFrClass, titleEnClass, titleBzClass = classNames({ [TitleCss.active] : false });
 		switch (this.state.index) {
 			case 0:
 				titleFrClass = classNames({ [TitleCss.active] : true });
@@ -41,6 +41,6 @@ export class Title extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(Title);

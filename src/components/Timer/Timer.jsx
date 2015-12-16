@@ -15,7 +15,7 @@ export class Timer extends React.Component {
 	}
 	delayQuestion() {
 		this.questionTimer = setTimeout(()=>{
-			this.setState({displayQuestion: true});
+			this.setState({ displayQuestion: true });
 			this.delayClose();
 		}, 60000);
 	}
@@ -27,7 +27,7 @@ export class Timer extends React.Component {
 	resetTimer() {
 		clearTimeout(this.questionTimer);
 		clearTimeout(this.closeTimer);
-		this.setState({displayQuestion: false});
+		this.setState({ displayQuestion: false });
 	}
 	dispatchDelayTimer(){
 		this.props.dispatch(delayTimer());
@@ -89,6 +89,6 @@ export class Timer extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(Timer);

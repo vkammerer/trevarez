@@ -5,6 +5,9 @@ let pathToReact = path.resolve('node_modules', 'react/dist/react.min.js');
 let pathToReactDom = path.resolve('node_modules', 'react-dom/dist/react-dom.min.js');
 
 module.exports = {
+	eslint: {
+		configFile: '.eslintrc'
+	},
 	entry: [
 		path.join(__dirname, 'src', 'main.jsx')
 	],
@@ -30,6 +33,13 @@ module.exports = {
 		new ExtractTextPlugin('[name].css')
 	],
 	module: {
+		preLoaders: [
+			{
+				test: /\.js|\.jsx$/,
+				loader: 'eslint-loader',
+				exclude: ['node_modules']
+			}
+		],
 		loaders: [
 			{
 				test: /\.js|\.jsx$/,

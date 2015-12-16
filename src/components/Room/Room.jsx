@@ -3,16 +3,13 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import Teleporter from '../../teleporter';
 import {
-	selectLang,
 	selectRoom,
 	displayText,
-	delayTimer,
-	Lang
+	delayTimer
 } from '../../store/actions';
 import Slideshow from '../Slideshow/Slideshow';
 import Text from '../Text/Text';
 import Timer from '../Timer/Timer';
-import LangSelector from '../LangSelector/LangSelector';
 import RoomCss from './Room.css';
 
 // exported so we can write tests
@@ -22,7 +19,7 @@ export class Room extends React.Component {
 		super(props);
 		this.expand = this.expand.bind(this);
 		this.contract = this.contract.bind(this);
-		this.segmentStyle = {transform: `rotate(${this.props.room.segment}deg)`};
+		this.segmentStyle = { transform: `rotate(${this.props.room.segment}deg)` };
 	}
 	expand(){
 		if (this.props.selectedRoom !== this.props.room.name) {
@@ -53,10 +50,10 @@ export class Room extends React.Component {
 		let me = el.style.transform;
 		el.style.transform = null;
 		el.style.opacity = 0.01;
-		setTimeout(()=>{
+		setTimeout(() => {
 			el.style.transform = me;
 			el.style.opacity = 1;
-		}, 1000)
+		}, 1000);
 	}
 	componentDidMount() {
 		this.setTeleporter();
@@ -79,9 +76,9 @@ export class Room extends React.Component {
 						delay: 400
 					}
 				}]).then(()=>{
-					setTimeout(()=>{
+					setTimeout(() => {
 						this.props.dispatch(displayText(true));
-					}, 1000)
+					}, 1000);
 				});
 			}
 			else {
@@ -127,6 +124,6 @@ export class Room extends React.Component {
 			</div>
 		);
 	}
-};
+}
 
 export default connect((state) => { return state; })(Room);

@@ -10,7 +10,7 @@ function transforms(rect, dimensionsRect) {
 		translateY(${trY}px)
 		scaleX(${scX})
 		scaleY(${scY})
-	`
+	`;
 }
 
 class TrevarezTeleporter extends Teleporter {
@@ -48,7 +48,7 @@ class TrevarezTeleporter extends Teleporter {
 				this.element.classList.add('teleporter-idle');
 				this.teleportation.resolve();
 			}
-		}, timeoutDelay)
+		}, timeoutDelay);
 	}
 }
 

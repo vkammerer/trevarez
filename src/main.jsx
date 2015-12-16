@@ -18,7 +18,7 @@ const renderApp = () => {
 		</Provider>,
 		rootElement
 	);
-}
+};
 
 renderApp();
 
@@ -26,9 +26,9 @@ renderApp();
 // so we do it manually here for now.
 let reloadTimer;
 const reload = () => {
-	unmountComponentAtNode(rootElement)
+	unmountComponentAtNode(rootElement);
 	renderApp();
-}
+};
 
 window.addEventListener('resize', () => {
 	clearTimeout(reloadTimer);

@@ -3,6 +3,9 @@ import webpack from 'webpack';
 
 module.exports = {
 	devtool: 'eval-source-map',
+	eslint: {
+		configFile: '.eslintrc'
+	},
 	entry: [
 		'webpack-hot-middleware/client',
 		path.join(__dirname, 'src', 'main.jsx')
@@ -20,6 +23,13 @@ module.exports = {
 		new webpack.NoErrorsPlugin()
 	],
 	module: {
+		preLoaders: [
+			{
+				test: /\.js|\.jsx$/,
+				loader: 'eslint-loader',
+				exclude: ['node_modules']
+			}
+		],
 		loaders: [
 			{
 				test: /\.js|\.jsx$/,

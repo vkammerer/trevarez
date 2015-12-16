@@ -16,6 +16,6 @@ describe('Title', () => {
 		result.props.children.length.should.equal(3);
 		result.props.children.forEach((child) => {
 			child.type.should.equal('h1');
-		})
+		});
 	});
 });
