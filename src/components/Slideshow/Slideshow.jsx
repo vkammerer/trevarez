@@ -12,6 +12,16 @@ export class Slideshow extends React.Component {
 	constructor(props) {
 		super(props);
 	}
+	componentDidUpdate(prevProps) {
+		if (
+			(prevProps.selectedRoom === this.props.room.name) &&
+			(this.props.selectedRoom === '')
+		){
+			this.refs.slider.setState({
+				currentSlide: 0
+			});
+		}
+	}
 	render() {
 		let images = this.props.room.images.map((image, index) => {
 			let bgStyle = {
@@ -25,7 +35,7 @@ export class Slideshow extends React.Component {
 			);
 		});
 		return (
-			<Slider infinite swipe draggable >
+			<Slider infinite swipe draggable ref='slider'>
 				<PrevArrow
 					activeClassName={SlideshowCss.prevArrow}
 					inactiveClassName={SlideshowCss.prevArrow} />

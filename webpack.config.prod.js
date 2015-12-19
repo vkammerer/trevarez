@@ -17,7 +17,7 @@ module.exports = {
 		publicPath: ''
 	},
 	resolve: {
-	extensions: ['', '.js', '.jsx', '.css'],
+		extensions: ['', '.js', '.jsx', '.css'],
 		alias: {
 			'react': pathToReact,
 			'react-dom': pathToReactDom
