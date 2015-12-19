@@ -1,3 +1,6 @@
+/*
+	ROOM
+*/
 .room {
 	position: absolute;
 	width: 5%;
@@ -6,27 +9,39 @@
 	background: #555;
 	padding: 2px;
 }
+.room.expandedPosition {
+	left: 1.25% !important;
+	top: 2% !important;
+	right: 1.25% !important;
+	bottom: 2% !important;
+	width: auto;
+	height: auto;
+}
+.room.selected,
+.room:global(.teleporter-active) {
+	z-index: 10;
+}
 .room:after {
 	content: '';
 	position: absolute;
-	width: 100%;
-	height: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 	opacity: 1;
-	transition: opacity 0.35s ease-in;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.3);
+	transition: opacity 0.3s ease-in;
 }
+.room.selected:after,
 .room:global(.teleporter-active):after {
 	opacity: 0;
+}
+.room:global(.teleporter-active):after {
 	transition: none;
 }
-.room:global(.teleporter-idle).selected:after {
-	opacity: 0;
-	transition: none;
-}
-.room:global(.teleporter-active).selected:after {
-	opacity: 0;
-	transition: opacity 0.35s ease-in;
-}
+/*
+	SEGMENT
+*/
 .segment {
 	height: 40px;
 	width: 120%;
@@ -35,7 +50,14 @@
 	left: 50%;
 	background: #444;
 	transform-origin: 0 0;
-	transition: width 0.2s ease-in;
+	transition: width 0.3s ease-in;
+}
+.room.selected .segment,
+.room:global(.teleporter-active) .segment {
+	width: 0%;
+}
+.room:global(.teleporter-active) .segment {
+	transition: none;
 }
 .segment:after {
 	content: '';
@@ -47,22 +69,13 @@
 	top: -280%;
 	border-radius: 50%;
 }
-.room:global(.teleporter-active) .segment,
-.room:global(.teleporter-idle).selected .segment {
-	width: 0%;
-	transition: none;
-}
 .room:global(.teleporter-active) .segment:after,
-.room:global(.teleporter-idle).selected .segment:after {
-	width: 0;
+.room:global(.expanded) .segment:after {
+	display: none;
 }
-.room:global(.teleporter-active).selected .segment:after {
-	width: 32vh;
-}
-.room:global(.teleporter-active).selected .segment {
-	width: 0%;
-	transition: width 0.2s ease-in;
-}
+/*
+	CONTENT
+*/
 .content {
 	position: absolute;
 	width: 100%;
@@ -78,14 +91,12 @@
 .room:global(.teleporter-active) .content {
 	outline: none;
 }
-.expanded {
-	left: 1.25% !important;
-	top: 2% !important;
-	right: 1.25% !important;
-	bottom: 2% !important;
-	width: auto;
-	height: auto;
+.room.selected .content {
+	box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
 }
+/*
+	Expand and Contract targets
+*/
 .expand,
 .contract {
 	position: absolute;
@@ -97,6 +108,9 @@
 	left: 0;
 	bottom: 0;
 }
+.room.selected .expand {
+	display: none
+}
 .contract {
 	display: none;
 	height: 8%;
@@ -104,6 +118,10 @@
 	line-height: 160%;
 	font-size: 1.2em;
 	background: rgba(255,255,255,0.85);
+}
+.room.selected .contract {
+	display: block;
+	text-align: center;
 }
 .contract:before,
 .contract:after {
@@ -122,20 +140,4 @@
 .contract:after {
 	top: 0;
 	transform: rotate(-45deg);
-}
-.room:global(.teleporter-active) {
-	z-index: 9
-}
-.room.selected {
-	z-index: 10;
-}
-.room.selected .content {
-	box-shadow: 0 0 15px 4px rgba(0,0,0,0.4);
-}
-.room.selected .expand {
-	display: none
-}
-.room.selected .contract {
-	display: block;
-	text-align: center;
 }

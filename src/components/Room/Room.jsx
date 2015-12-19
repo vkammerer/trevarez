@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import Teleporter from '../../teleporter';
+import Teleporter from 'teleporter';
 import {
 	selectRoom,
 	displayText,
@@ -17,11 +17,12 @@ import RoomCss from './Room.css';
 export class Room extends React.Component {
 	constructor(props) {
 		super(props);
-		this.expand = this.expand.bind(this);
-		this.contract = this.contract.bind(this);
+		this.onRoomClick = this.onRoomClick.bind(this);
+		this.onContractClick = this.onContractClick.bind(this);
+		this.openRoom = this.openRoom.bind(this);
 		this.segmentStyle = { transform: `rotate(${this.props.room.segment}deg)` };
 	}
-	expand(){
+	onRoomClick(){
 		if (this.props.selectedRoom !== this.props.room.name) {
 			this.props.dispatch(selectRoom(this.props.room.name));
 		}
@@ -29,35 +30,51 @@ export class Room extends React.Component {
 			this.props.dispatch(delayTimer());
 		}
 	}
-	contract(){
+	onContractClick(e){
 		if (this.props.selectedRoom === this.props.room.name) {
 			this.props.dispatch(selectRoom(''));
 		}
-		return false;
+		e.stopPropagation();
 	}
 	setTeleporter() {
 		this.teleporter = new Teleporter({
 			selector: `#${this.refs.roomRoot.id}`,
-			sizeClass: RoomCss.expanded,
+			sizeClass: RoomCss.expandedPosition,
 			animation: {
 				duration: 600,
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
 		});
+		this.openingTeleportation = this.teleporter.createTeleportation(['', {
+			class: RoomCss.expandedPosition,
+			animation: {
+				duration: 600,
+				easing: 'cubic-bezier(0,0,0.32,1)'
+			}
+		}]);
+		this.closingTeleportation = this.teleporter.createTeleportation([RoomCss.expandedPosition, '']);
 	}
 	fixChromeTransform() {
-		let el = document.querySelector(`#${this.refs.roomRoot.id} > .teleporter-container`);
+		let el = document.querySelector(`#${this.refs.roomRoot.id} > .teleporter-wrapper`);
 		let me = el.style.transform;
 		el.style.transform = null;
 		el.style.opacity = 0.01;
 		setTimeout(() => {
 			el.style.transform = me;
 			el.style.opacity = 1;
-		}, 1000);
+		}, 2000);
 	}
 	componentDidMount() {
 		this.setTeleporter();
 		this.fixChromeTransform();
+	}
+	openRoom() {
+		this.openingTeleportation.run().then(()=>{
+			this.refs.roomRoot.classList.add('expanded');
+			setTimeout(() => {
+				this.props.dispatch(displayText(true));
+			}, 1000);
+		});
 	}
 	componentDidUpdate(prevProps) {
 		if (
@@ -68,21 +85,10 @@ export class Room extends React.Component {
 			)
 		) {
 			if (this.props.selectedRoom === this.props.room.name) {
-				this.teleporter.teleport(['', {
-					class: RoomCss.expanded,
-					animation: {
-						duration: 600,
-						easing: 'cubic-bezier(0,0,0.32,1)',
-						delay: 400
-					}
-				}]).then(()=>{
-					setTimeout(() => {
-						this.props.dispatch(displayText(true));
-					}, 1000);
-				});
+				setTimeout(this.openRoom.bind(this), 400);
 			}
 			else {
-				this.teleporter.teleport([RoomCss.expanded, '']).then(()=>{
+				this.closingTeleportation.run().then(()=>{
 					this.props.dispatch(displayText(false));
 				});
 			}
@@ -95,7 +101,7 @@ export class Room extends React.Component {
 		});
 		return (
 			<div
-				onClick={this.expand}
+				onClick={this.onRoomClick}
 				ref='roomRoot'
 				id={this.props.room.name}
 				className={roomClass}
@@ -111,15 +117,12 @@ export class Room extends React.Component {
 						className={RoomCss.expand}>
 					</div>
 					<div
-						onClick={this.contract}
+						onClick={this.onContractClick}
 						className={RoomCss.contract}>
 					</div>
-					<Slideshow room={this.props.room}>
-					</Slideshow>
-					<Text room={this.props.room}>
-					</Text>
-					<Timer room={this.props.room}>
-					</Timer>
+					<Slideshow room={this.props.room}></Slideshow>
+					<Text room={this.props.room}></Text>
+					<Timer room={this.props.room}></Timer>
 				</div>
 			</div>
 		);

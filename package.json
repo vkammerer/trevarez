@@ -60,7 +60,7 @@
     "redux": "^3.0.4",
     "rimraf": "^2.4.4",
     "style-loader": "^0.13.0",
-    "teleporter": "0.0.5",
+    "teleporter": "0.0.7",
     "webpack": "^1.12.6",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.5.0"
