@@ -33,17 +33,19 @@ export class Slideshow extends React.Component {
 			);
 		});
 		return (
-			<Slider {...this.state} infinite swipe draggable>
-				<PrevArrow
-					activeClassName={SlideshowCss.prevArrow}
-					inactiveClassName={SlideshowCss.prevArrow} />
-				<Slides {...this.props}  >
-					{images}
-				</Slides>
-				<NextArrow
-					activeClassName={SlideshowCss.nextArrow}
-					inactiveClassName={SlideshowCss.nextArrow} />
-			</Slider>
+			<div className={SlideshowCss.sliderContainer}>
+				<Slider {...this.state} infinite swipe draggable>
+					<PrevArrow
+						activeClassName={SlideshowCss.prevArrow}
+						inactiveClassName={SlideshowCss.prevArrow} />
+					<Slides {...this.props}  >
+						{images}
+					</Slides>
+					<NextArrow
+						activeClassName={SlideshowCss.nextArrow}
+						inactiveClassName={SlideshowCss.nextArrow} />
+				</Slider>
+			</div>
 		);
 	}
 }
