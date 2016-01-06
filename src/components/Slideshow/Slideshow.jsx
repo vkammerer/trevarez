@@ -17,7 +17,7 @@ export class Slideshow extends React.Component {
 			(prevProps.selectedRoom === this.props.room.name) &&
 			(this.props.selectedRoom === '')
 		){
-			this.setState({ currentSlide: 0 });
+			this.refs.slider.setState({ currentSlide: 0 });
 		}
 	}
 	render() {
@@ -34,7 +34,7 @@ export class Slideshow extends React.Component {
 		});
 		return (
 			<div className={SlideshowCss.sliderContainer}>
-				<Slider {...this.state} infinite swipe draggable>
+				<Slider infinite swipe draggable ref='slider'>
 					<PrevArrow
 						activeClassName={SlideshowCss.prevArrow}
 						inactiveClassName={SlideshowCss.prevArrow} />
