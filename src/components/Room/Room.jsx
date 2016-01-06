@@ -45,14 +45,15 @@ export class Room extends React.Component {
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
 		});
-		this.openingTeleportation = this.teleporter.createTeleportation(['', {
+		this.openingTeleportation = {
 			class: RoomCss.expandedPosition,
 			animation: {
 				duration: 600,
 				easing: 'cubic-bezier(0,0,0.32,1)'
 			}
-		}]);
-		this.closingTeleportation = this.teleporter.createTeleportation([RoomCss.expandedPosition, '']);
+		};
+		this.closingTeleportation = RoomCss.expandedPosition;
+		this.teleporter.saveSteps([this.openingTeleportation, this.closingTeleportation, '']);
 	}
 	fixChromeTransform() {
 		let el = document.querySelector(`#${this.refs.roomRoot.id} > .teleporter-wrapper`);
@@ -69,7 +70,7 @@ export class Room extends React.Component {
 		this.fixChromeTransform();
 	}
 	openRoom() {
-		this.openingTeleportation.run().then(()=>{
+		this.teleporter.teleport(this.openingTeleportation).then(()=>{
 			this.refs.roomRoot.classList.add('expanded');
 			setTimeout(() => {
 				this.props.dispatch(displayText(true));
@@ -88,7 +89,7 @@ export class Room extends React.Component {
 				setTimeout(this.openRoom.bind(this), 400);
 			}
 			else {
-				this.closingTeleportation.run().then(()=>{
+				this.teleporter.teleport([this.closingTeleportation, '']).then(()=>{
 					this.props.dispatch(displayText(false));
 				});
 			}
