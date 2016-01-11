@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Isvg from 'react-inlinesvg';
+import { selectRoom } from '../../store/actions';
 import Room from '../Room/Room';
 import Title from '../Title/Title';
 import AppCss from './App.css';
@@ -11,12 +12,27 @@ import content from '../../content/content';
 export class App extends React.Component {
 	constructor(props) {
 		super(props);
+		this.handleClicks = this.handleClicks.bind(this);
+	}
+	handleClicks() {
+		Object.keys(content).forEach((room) => {
+			let roomElement = document.getElementById(room + '_layer');
+			roomElement.onclick = () => {
+				if (this.props.selectedRoom !== room) {
+					this.props.dispatch(selectRoom(room));
+				}
+			};
+		});
 	}
 	render() {
 		return (
 			<div
 				className={AppCss.app}>
-				<Isvg src="img/roomsLayer.svg" className={AppCss.roomsLayer} uniquifyIDs={false}></Isvg>
+				<Isvg
+					src="img/roomsLayer.svg"
+					className={AppCss.roomsLayer}
+					uniquifyIDs={false}
+					onLoad={this.handleClicks} />
 				<Title />
 				<Room
 					room={{
@@ -28,10 +44,8 @@ export class App extends React.Component {
 						images: [
 							'argenterie_0',
 							'argenterie_1',
-							'argenterie_2',
 							'argenterie_3',
-							'argenterie_4',
-							'argenterie_5'
+							'argenterie_4'
 						]
 					}}>
 				</Room>
@@ -97,10 +111,6 @@ export class App extends React.Component {
 						segment: 120,
 						images: [
 							'salle_de_bain_0',
-							'salle_de_bain_1',
-							'salle_de_bain_2',
-							'salle_de_bain_3',
-							'salle_de_bain_4',
 							'salle_de_bain_5',
 							'salle_de_bain_6'
 						]
@@ -116,8 +126,7 @@ export class App extends React.Component {
 						images: [
 							'salle_de_reunion_0',
 							'salle_de_reunion_1',
-							'salle_de_reunion_2',
-							'salle_de_reunion_3'
+							'salle_de_reunion_2'
 						]
 					}}>
 				</Room>
