@@ -1,0 +1,18 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "fr.drangies.trevarez"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "fr.drangies.trevarez"
+        }
+    },
+    "dependent_plugins": {}
+}

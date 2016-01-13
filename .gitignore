@@ -3,3 +3,4 @@ node_modules
 release
 npm-debug.log
 reports
+platforms/android

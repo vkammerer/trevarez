@@ -24,16 +24,29 @@ renderApp();
 
 // Teleporter doesnt rerender components on page resize for now
 // so we do it manually here for now.
-let reloadTimer;
 const reload = () => {
 	unmountComponentAtNode(rootElement);
 	renderApp();
 };
 
-window.addEventListener('resize', () => {
-	clearTimeout(reloadTimer);
-	reloadTimer = setTimeout(reload, 100);
-});
+// if document url is not starting with http or https it is running inside an electron or cordova app
+let isApp = document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
+// check if the user agent is one of the mobile device
+let mobilePhone = navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/);
+
+// the combination of isApp and mobilePhone is a good way to know if the app is running inside cordova
+// if so, reload the app to avoid flickering
+// TODO understand why it flickers
+if (isApp && mobilePhone) {
+	setTimeout(reload, 100);
+}
+else {
+	let reloadTimer;
+	window.addEventListener('resize', () => {
+		clearTimeout(reloadTimer);
+		reloadTimer = setTimeout(reload, 100);
+	});
+}
 
 // Development hot reloading
 if (module.hot) {

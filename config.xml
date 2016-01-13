@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="fr.drangies.trevarez" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+	<name>Trevarez</name>
+	<description>
+		Application
+	</description>
+	<author email="xavier.seignard@gmail.com" href="http://drangies.fr">
+		Xavier Seignard
+	</author>
+	<content src="index.cordova.html" />
+	<plugin name="cordova-plugin-whitelist" spec="1" />
+	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<preference name="orientation" value="landscape" />
+	<icon src="resources/cordova/icon.png" />
+	<preference name="SplashScreenDelay" value="10000" />
+	<preference name="AutoHideSplashScreen" value="false" />
+	<platform name="android">
+		<allow-intent href="market:*" />
+		<splash src="resources/cordova/splash.png" />
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
+	</platform>
+	<preference name="xwalkVersion" value="15+" />
+	<preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+	<preference name="xwalkMode" value="embedded" />
+	<preference name="xwalkMultipleApk" value="true" />
+</widget>
