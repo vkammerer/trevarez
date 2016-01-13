@@ -40,3 +40,19 @@ npm run deploy
 npm version [major|minor|patch]
 git push && git push --tag
 ```
+
+### Build mobile app
+
+L'app repose sur la webview de [crosswalk](https://crosswalk-project.org/) qui est sensé unifier les webview d'un device à l'autre.
+
+#### Android
+
+S'assurer d'avoir le SDK android d'installé: [Guide d'installation du SDK android](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html)
+
+Ajouter la plateforme android: lancer cette commande une seule fois `npm run cordova:platfom:android`
+
+Lancer l'app (sur l'émulateur ou un device connecté et reconnu par `adb`) avec `npm run cordova:run:android`
+
+#### iOS
+
+TODO!!
