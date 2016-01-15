@@ -43,6 +43,8 @@ git push && git push --tag
 
 ### Build mobile app
 
+Installer `cordova`: `npm i cordova -g`
+
 L'app repose sur la webview de [crosswalk](https://crosswalk-project.org/) qui est sensé unifier les webview d'un device à l'autre.
 
 #### Android

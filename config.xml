@@ -2,32 +2,27 @@
 <widget id="fr.drangies.trevarez" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
 	<name>Trevarez</name>
 	<description>
-		Application
+		Application pour l'exposition "Bâtir un rêve" au Château de Trevarez.
 	</description>
 	<author email="xavier.seignard@gmail.com" href="http://drangies.fr">
 		Xavier Seignard
 	</author>
 	<content src="index.cordova.html" />
 	<plugin name="cordova-plugin-whitelist" spec="1" />
-	<access origin="*" />
-	<allow-intent href="http://*/*" />
-	<allow-intent href="https://*/*" />
-	<allow-intent href="tel:*" />
-	<allow-intent href="sms:*" />
-	<allow-intent href="mailto:*" />
-	<allow-intent href="geo:*" />
-	<preference name="orientation" value="landscape" />
 	<icon src="resources/cordova/icon.png" />
-	<preference name="SplashScreenDelay" value="10000" />
-	<preference name="AutoHideSplashScreen" value="false" />
 	<platform name="android">
-		<allow-intent href="market:*" />
-		<splash src="resources/cordova/splash.png" />
+		<splash src="resources/cordova/android/splash-land-hdpi.png" density="land-hdpi"/>
+		<splash src="resources/cordova/android/splash-land-ldpi.png" density="land-ldpi"/>
+		<splash src="resources/cordova/android/splash-land-mdpi.png" density="land-mdpi"/>
+		<splash src="resources/cordova/android/splash-land-xhdpi.png" density="land-xhdpi"/>
 	</platform>
 	<platform name="ios">
-		<allow-intent href="itms:*" />
-		<allow-intent href="itms-apps:*" />
+		<splash src="resources/cordova/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+		<splash src="resources/cordova/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+		<splash src="resources/cordova/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
 	</platform>
+	<preference name="orientation" value="landscape" />
+	<preference name="SplashScreenDelay" value="10000" />
 	<preference name="xwalkVersion" value="15+" />
 	<preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
 	<preference name="xwalkMode" value="embedded" />

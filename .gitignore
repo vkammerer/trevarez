@@ -4,3 +4,4 @@ release
 npm-debug.log
 reports
 platforms/android
+platforms/ios

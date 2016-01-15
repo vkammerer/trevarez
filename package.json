@@ -24,7 +24,10 @@
     "codeclimate": "CODECLIMATE_REPO_TOKEN=b02ea30e27e20150c80e3e084f8b02bea77bb7fa0cbeaf8e73dbccd54a31085b codeclimate-test-reporter < reports/lcov.info",
     "ci": "npm run clean && npm run lint && npm run coverage && npm run codeclimate && npm run build && npm run build:win",
     "cordova:platfom:android": "cordova platform add android",
-    "cordova:run:android": "cordova run android"
+    "cordova:platfom:android": "cordova platform add ios",
+    "cordova:run:android": "cordova run android",
+    "cordova:run:ios": "cordova run ios",
+    "cordova:release:android": "cordova build --release android"
   },
   "repository": {
     "type": "git",
@@ -39,7 +42,6 @@
     "chai": "^3.4.1",
     "classnames": "^2.2.0",
     "codeclimate-test-reporter": "^0.1.1",
-    "cordova": "^5.4.1",
     "css-loader": "^0.23.0",
     "electron-builder": "^2.2.0",
     "electron-packager": "^5.1.1",
