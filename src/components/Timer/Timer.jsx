@@ -80,11 +80,11 @@ export class Timer extends React.Component {
 				</div>
 				<div className={TimerCss.textBz}>
 					<h2>
-						Kenavo?
+						C'hoant 'peus da zerc'hen da vizito ar zal-mañ ?
 					</h2>
 					<div
 						className={TimerCss.button}
-						onClick={this.dispatchDelayTimer}>Asterix</div>
+						onClick={this.dispatchDelayTimer}>Ya</div>
 				</div>
 			</div>
 		);
