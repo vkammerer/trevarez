@@ -9,14 +9,27 @@
 	</author>
 	<content src="index.cordova.html" />
 	<plugin name="cordova-plugin-whitelist" spec="1" />
-	<icon src="resources/cordova/icon.png" />
 	<platform name="android">
-		<splash src="resources/cordova/android/splash-land-hdpi.png" density="land-hdpi"/>
+		<icon src="resources/cordova/android/icon-ldpi.png" density="ldpi" />
+		<icon src="resources/cordova/android/icon-mdpi.png" density="mdpi" />
+		<icon src="resources/cordova/android/icon-hdpi.png" density="hdpi" />
+		<icon src="resources/cordova/android/icon-xhdpi.png" density="xhdpi" />
 		<splash src="resources/cordova/android/splash-land-ldpi.png" density="land-ldpi"/>
 		<splash src="resources/cordova/android/splash-land-mdpi.png" density="land-mdpi"/>
+		<splash src="resources/cordova/android/splash-land-hdpi.png" density="land-hdpi"/>
 		<splash src="resources/cordova/android/splash-land-xhdpi.png" density="land-xhdpi"/>
 	</platform>
 	<platform name="ios">
+		<!-- iOS 8.0+ -->
+		<!-- iPhone 6 Plus  -->
+		<icon src="resources/cordova/ios/icon-60@3x.png" width="180" height="180" />
+		<!-- iOS 7.0+ -->
+		<!-- iPhone / iPod Touch  -->
+		<icon src="resources/cordova/ios/icon-60.png" width="60" height="60" />
+		<icon src="resources/cordova/ios/icon-60@2x.png" width="120" height="120" />
+		<!-- iPad -->
+		<icon src="resources/cordova/ios/icon-76.png" width="76" height="76" />
+		<icon src="resources/cordova/ios/icon-76@2x.png" width="152" height="152" />
 		<splash src="resources/cordova/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
 		<splash src="resources/cordova/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
 		<splash src="resources/cordova/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
