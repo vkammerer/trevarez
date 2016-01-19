@@ -9,10 +9,10 @@ module.exports = {
 		configFile: '.eslintrc'
 	},
 	entry: [
-		path.join(__dirname, 'src', 'main.jsx')
+		path.join(__dirname, '..', 'src', 'main.jsx')
 	],
 	output: {
-		path: path.join(__dirname, 'www'),
+		path: path.join(__dirname, '..', 'www'),
 		filename: '[name].js',
 		publicPath: ''
 	},
