@@ -111,8 +111,11 @@ export class App extends React.Component {
 						segment: 120,
 						images: [
 							'salle_de_bain_0',
-							'salle_de_bain_5',
-							'salle_de_bain_6'
+							'salle_de_bain_1',
+							'salle_de_bain_2',
+							'salle_de_bain_3',
+							'salle_de_bain_4',
+							'salle_de_bain_5'
 						]
 					}}>
 				</Room>
