@@ -1,6 +1,6 @@
 .vscode
 node_modules
-release
+electron
 npm-debug.log
 reports
 platforms/android
