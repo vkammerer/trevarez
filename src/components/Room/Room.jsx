@@ -59,16 +59,21 @@ export class Room extends React.Component {
 		}, 2000);
 	}
 	componentDidMount() {
-		this.setTeleporter();
-		this.fixChromeTransform();
+		//this.setTeleporter();
+		//this.fixChromeTransform();
 	}
 	openRoom() {
-		this.teleporter.teleport(RoomCss.expandedPosition).then(()=>{
-			this.refs.roomRoot.classList.add('expanded');
-			setTimeout(() => {
-				this.props.dispatch(displayText(true));
-			}, 1000);
-		});
+		// this.teleporter.teleport(RoomCss.expandedPosition).then(()=>{
+		// 	this.refs.roomRoot.classList.add('expanded');
+		// 	setTimeout(() => {
+		// 		this.props.dispatch(displayText(true));
+		// 	}, 1000);
+		// });
+		document.getElementById(this.props.room.name).classList.add(RoomCss.expandedPosition);
+		setTimeout(() => {
+			this.props.dispatch(displayText(true));
+		}, 1000);
+
 	}
 	componentDidUpdate(prevProps) {
 		if (
@@ -82,9 +87,11 @@ export class Room extends React.Component {
 				setTimeout(this.openRoom.bind(this), 400);
 			}
 			else {
-				this.teleporter.teleport([RoomCss.expandedPosition, '']).then(()=>{
-					this.props.dispatch(displayText(false));
-				});
+				// this.teleporter.teleport([RoomCss.expandedPosition, '']).then(()=>{
+				// 	this.props.dispatch(displayText(false));
+				// });
+				document.getElementById(this.props.room.name).classList.remove(RoomCss.expandedPosition);
+				this.props.dispatch(displayText(false));
 			}
 		}
 	}

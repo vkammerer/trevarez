@@ -19,7 +19,7 @@
 }
 .room.selected,
 .room:global(.teleporter-active) {
-	z-index: 10;
+	z-index: 99;
 }
 .room:after {
 	content: '';
@@ -34,7 +34,7 @@
 }
 .room.selected:after,
 .room:global(.teleporter-active):after {
-	opacity: 0;
+	display: none;
 }
 .room:global(.teleporter-active):after {
 	transition: none;

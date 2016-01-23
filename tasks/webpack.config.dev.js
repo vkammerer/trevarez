@@ -37,7 +37,7 @@ module.exports = {
 				loader: 'babel'
 			},
 			{
-				test: /\.woff$/,
+				test: /\.woff$|\.ttf$/,
 				loader: 'file-loader?name=[name].[ext]'
 			},
 			{
