@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import './css/global';
 import App from './components/App/App';
 import reducers from './store/reducers';
+import fastclick from 'fastclick';
 
 // create redux store from the reducer
 let store = createStore(reducers);
@@ -17,6 +18,9 @@ render(
 	</Provider>,
 	rootElement
 );
+
+// use fastclick
+fastclick.attach(document.body);
 
 // Development hot reloading
 if (module.hot) {
