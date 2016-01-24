@@ -21,6 +21,7 @@ export class Room extends React.Component {
 		this.onContractClick = this.onContractClick.bind(this);
 		this.openRoom = this.openRoom.bind(this);
 		this.segmentStyle = { transform: `rotate(${this.props.room.segment}deg)` };
+		this.transformOrigin = `${this.props.room.left}% ${this.props.room.top}%`;
 	}
 	onRoomClick(){
 		if (this.props.selectedRoom !== this.props.room.name) {
@@ -69,7 +70,7 @@ export class Room extends React.Component {
 		// 		this.props.dispatch(displayText(true));
 		// 	}, 1000);
 		// });
-		document.getElementById(this.props.room.name).classList.add(RoomCss.expandedPosition);
+		document.getElementById(this.props.room.name).classList.add('expandedPosition');
 		setTimeout(() => {
 			this.props.dispatch(displayText(true));
 		}, 1000);
@@ -90,8 +91,15 @@ export class Room extends React.Component {
 				// this.teleporter.teleport([RoomCss.expandedPosition, '']).then(()=>{
 				// 	this.props.dispatch(displayText(false));
 				// });
-				document.getElementById(this.props.room.name).classList.remove(RoomCss.expandedPosition);
+				document.getElementById(this.props.room.name).classList.add(RoomCss.selected);
+				document.getElementById(this.props.room.name).classList.add('expandedPosition');
+				document.getElementById(this.props.room.name).classList.add('expandedPositionRectration');
 				this.props.dispatch(displayText(false));
+				setTimeout(() => {
+					document.getElementById(this.props.room.name).classList.remove('expandedPositionRectration');
+					document.getElementById(this.props.room.name).classList.remove('expandedPosition');
+					document.getElementById(this.props.room.name).classList.remove(RoomCss.selected);
+				}, 600);
 			}
 		}
 	}
@@ -108,7 +116,8 @@ export class Room extends React.Component {
 				className={roomClass}
 				style={{
 					top: `${this.props.room.top}%`,
-					left: `${this.props.room.left}%`
+					left: `${this.props.room.left}%`,
+					transformOrigin: this.transformOrigin
 				}}>
 				<div className={RoomCss.segment}
 					style={this.segmentStyle}></div>

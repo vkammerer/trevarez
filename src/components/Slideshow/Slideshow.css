@@ -42,6 +42,12 @@
 	border-top: 1vh solid transparent;
 	border-bottom: 1vh solid transparent;
 	border-right: 1vh solid #555;
+	display: none;
+}
+
+:global(.expandedPosition) .prevArrow:after,
+:global(.expandedPosition) .nextArrow:after {
+	display: block;
 }
 .nextArrow:after {
 	left: auto;
